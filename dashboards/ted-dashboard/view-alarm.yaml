@@ -26,8 +26,9 @@ cards:
     cards:
       - type: custom:ted-button-card
         name: Add Alarm
-        icon: streamline-freehand-color:alarm-clock-add
-        icon_scale: 130
+        show_name: true
+        icon: mdi:alarm-plus
+        icon_scale: 120
         icon_color: none
         transparency: 25
         background: light-grey
@@ -36,8 +37,9 @@ cards:
           ted_add: alarm
       - type: custom:ted-button-card
         name: Add Timer
-        icon: streamline-freehand-color:time-stopwatch-add
-        icon_scale: 130
+        show_name: true
+        icon: mdi:timer-plus-outline
+        icon_scale: 120
         icon_color: none
         transparency: 25
         background: light-grey
