@@ -32,11 +32,9 @@ cards:
           type: vertical-stack
           cards:
             - type: custom:ted-button-card
-              name: Add Alarm
+              name: + Add Alarm
               show_name: true
-              orientation: horizontal
               icon: mdi:alarm-plus
-              icon_scale: 100
               icon_color: none
               width: 170
               height: 48
@@ -45,6 +43,12 @@ cards:
               tap_action:
                 action: fire-dom-event
                 ted_add: alarm
+              element_order:
+                - icon
+                - name
+                - state
+              orientation: horizontal
+              show_icon: false
             - type: custom:ted-alarm-card
               show_add: false
               show_header_icon: false
@@ -56,8 +60,9 @@ cards:
           type: vertical-stack
           cards:
             - type: custom:ted-button-card
-              name: Add Timer
+              name: + Add Timer
               show_name: true
+              show_icon: false
               orientation: horizontal
               icon: mdi:timer-plus-outline
               icon_scale: 100
@@ -66,6 +71,10 @@ cards:
               height: 48
               transparency: 25
               background: light-grey
+              element_order:
+                - icon
+                - name
+                - state
               tap_action:
                 action: fire-dom-event
                 ted_add: timer
