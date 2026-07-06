@@ -43,8 +43,8 @@ sections:
         transparency: 25
         tap_action:
           action: call-service
-          service: script.deploy_dashboard_git_pull
-        name: Deploy
+          service: script.deploy_dashboard
+        name: Git Pull
         icon: streamline-ultimate-color:github-logo-1
         background: light-grey
   - placement: center
