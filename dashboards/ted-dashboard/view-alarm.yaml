@@ -36,7 +36,7 @@ cards:
               show_name: true
               icon: mdi:alarm-plus
               icon_color: none
-              width: 170
+              width: 250
               height: 48
               transparency: 25
               background: light-grey
@@ -67,7 +67,7 @@ cards:
               icon: mdi:timer-plus-outline
               icon_scale: 100
               icon_color: none
-              width: 170
+              width: 250
               height: 48
               transparency: 25
               background: light-grey
