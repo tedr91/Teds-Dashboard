@@ -43,7 +43,9 @@ sections:
         transparency: 25
         tap_action:
           action: call-service
-          service: script.deploy_dashboard
+          service: script.turn_on
+          data:
+            entity_id: script.deploy_dashboard
         name: Deploy
         icon: streamline-ultimate-color:github-logo-1
         background: light-grey
