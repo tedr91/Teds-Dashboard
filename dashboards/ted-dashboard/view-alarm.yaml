@@ -1,0 +1,69 @@
+# View: Alarm (custom:grid-layout) — path: alarm
+# Alarms & Timers in a single tabbed Ted's Tab Card, with two prominent Add buttons
+# above it. The Add buttons fire an `ll-custom` DOM event (action: fire-dom-event) that
+# the alarm/timer cards listen for to open their add dialogs. Deep-link a tab with
+# `?tab=alarms` / `?tab=timers` (see the navbar Alarms/Timer buttons).
+# Navbar is a plain card in `cards:` (`- !include navbar.yaml`); it's position:fixed so
+# it needs no grid-area.
+type: custom:grid-layout
+path: alarm
+title: Alarm
+icon: streamline-freehand-color:alert-alarm-clock
+layout:
+  height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px))
+  grid-template-columns: 1fr
+  grid-template-rows: minmax(0, auto) minmax(0, 1fr)
+  grid-template-areas: |
+    "actions"
+    "tabs"
+  grid-gap: 12px
+  padding: 12px
+  box-sizing: border-box
+cards:
+  - type: horizontal-stack
+    view_layout:
+      grid-area: actions
+    cards:
+      - type: custom:ted-button-card
+        name: Add Alarm
+        icon: streamline-freehand-color:alarm-clock-add
+        icon_scale: 130
+        icon_color: none
+        transparency: 25
+        background: light-grey
+        tap_action:
+          action: fire-dom-event
+          ted_add: alarm
+      - type: custom:ted-button-card
+        name: Add Timer
+        icon: streamline-freehand-color:time-stopwatch-add
+        icon_scale: 130
+        icon_color: none
+        transparency: 25
+        background: light-grey
+        tap_action:
+          action: fire-dom-event
+          ted_add: timer
+  - type: custom:ted-tab-card
+    view_layout:
+      grid-area: tabs
+    default_tab: 0
+    url_param: tab
+    tabs:
+      - label: Alarms
+        icon: mdi:alarm
+        slug: alarms
+        card:
+          type: custom:ted-alarm-card
+          show_add: false
+          show_header_icon: false
+          show_header_name: false
+      - label: Timers
+        icon: mdi:timer-outline
+        slug: timers
+        card:
+          type: custom:ted-timer-card
+          show_add: false
+          show_header_icon: false
+          show_header_name: false
+  - !include navbar.yaml

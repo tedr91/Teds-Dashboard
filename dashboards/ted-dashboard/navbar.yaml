@@ -99,7 +99,7 @@ sections:
         transparency: 25
         tap_action:
           action: navigate
-          navigation_path: /home
+          navigation_path: /ted-dashboard/alarm?tab=timers
         name: Timer
         entity: sensor.teds_timers
         highlight:
@@ -117,7 +117,7 @@ sections:
         transparency: 25
         tap_action:
           action: navigate
-          navigation_path: /home
+          navigation_path: /ted-dashboard/alarm?tab=alarms
         name: Alarms
         entity: sensor.teds_alarms
         badge:
