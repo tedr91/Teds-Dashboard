@@ -44,7 +44,7 @@ sections:
         tap_action:
           action: call-service
           service: script.deploy_dashboard
-        name: Git Pull
+        name: Git Pull ✓
         icon: streamline-ultimate-color:github-logo-1
         background: light-grey
   - placement: center
