@@ -1,0 +1,369 @@
+# View: Home (Tablet Portrait) — sections view. path: home-tablet
+# Included by ted-dashboard.yaml. Navbar pulled via footer.card: !include navbar.yaml
+type: sections
+sections:
+  - type: grid
+    cards:
+      - theme: ha
+        clock_size: extra_large
+        type: custom:ted-clock-weather-card
+        weather_entity: weather.forecast_home
+      - type: custom:ted-room-card
+        area: kitchen
+        photo_height: 135
+        theme: ha
+        sections:
+          - buttons:
+              - type: custom:ted-light-card
+                entity: light.kitchen_ceiling_lights
+                memory_mode: helper
+                memory_entity: input_number.ted_light_mem_kitchen_ceiling_lights
+                name: Kitchen
+                show_state: false
+                name_scale: 80
+                icon_scale: 120
+                rocker_effect: false
+                brushed: true
+                ted_button_height: 2x
+              - type: custom:ted-light-card
+                entity: light.kitchen_pendant_lights
+                memory_mode: helper
+                memory_entity: input_number.ted_light_mem_kitchen_pendant_lights
+                name: Pendants
+                show_state: false
+                rocker_effect: false
+                icon_scale: 120
+                name_scale: 85
+                rocker: false
+                element_order:
+                  - name
+                  - state
+                  - icon
+                brushed: true
+              - type: custom:ted-light-card
+                entity: light.kitchen_under_cabinet_lights
+                name: Cabinets
+                rocker: false
+                rocker_effect: false
+                show_state: false
+                icon_scale: 125
+                name_scale: 80
+                element_order:
+                  - name
+                  - state
+                  - icon
+                brushed: true
+              - type: custom:ted-light-card
+                entity: light.kitchen_nook_ceiling_lights
+                name: Nook
+                show_state: false
+                memory_mode: helper
+                memory_entity: input_number.ted_light_mem_kitchen_nook_ceiling_lights
+                name_scale: 80
+                icon_scale: 120
+                rocker_effect: false
+                brushed: true
+                ted_button_height: 2x
+              - type: custom:ted-light-card
+                entity: light.dining_room_ceiling_lights
+                name: Dining
+                show_state: false
+                name_scale: 80
+                icon_scale: 120
+                rocker_effect: false
+                brushed: true
+                ted_button_height: 2x
+              - type: custom:ted-light-card
+                entity: light.dining_room_chandelier
+                name: Dining
+                show_state: false
+                rocker_effect: false
+                name_scale: 80
+                icon_scale: 120
+                brushed: true
+                ted_button_height: 2x
+            title: Lights
+            icon: openmoji:light-bulb
+          - buttons:
+              - type: custom:ted-camera-card
+                cameras:
+                  - entity: camera.front_yard_camera
+                  - entity: camera.front_door_camera
+                  - entity: camera.front_door_camera_package_camera
+                    enabled: false
+                  - entity: camera.garage_camera_high_resolution_channel
+                  - entity: camera.backyard
+                layout: big-small
+                name_size: 8
+                show_name: true
+                ted_button_width: full
+                ted_button_height: 2x
+            title: Test
+            icon: openmoji:ab-button-blood-type
+        photo_state_entity:
+          - light.kitchen_ceiling_lights
+          - light.kitchen_nook_ceiling_lights
+          - light.dining_room_ceiling_lights
+        photo_edge_gradient:
+          - top
+          - bottom
+        section_layout: tabbed
+      - type: custom:ted-room-card
+        area: garage
+        photo_height: 135
+        theme: ha
+        photo_state_entity:
+          - light.garage_main_lights
+        photo: bathroom
+        show_photo: false
+        status_items:
+          - type: occupancy
+            entity: binary_sensor.garage_occupancy
+            icon: streamline-emojis:woman-running-1
+          - type: brightness
+            entity: light.garage_main_lights
+            display: both
+            icon: streamline-ultimate-color:brightness
+        sections:
+          - buttons:
+              - type: custom:ted-light-card
+                entity: light.front_porch_lights
+                name: Front Porch
+                element_order:
+                  - icon
+                  - state
+                  - name
+                show_state: false
+                icon_scale: 75
+                name_scale: 75
+                memory_mode: helper
+                memory_entity: input_number.ted_light_mem_front_porch_lights
+                rocker_effect: false
+                icon: fluent:lightbulb-24-regular
+                rocker: false
+                orientation: horizontal
+                ted_button_height: half
+              - type: custom:ted-light-card
+                entity: light.back_yard_patio_lights
+                name: Back Patio
+                element_order:
+                  - icon
+                  - state
+                  - name
+                show_state: false
+                icon_scale: 75
+                name_scale: 75
+                memory_mode: helper
+                memory_entity: input_number.ted_light_mem_back_yard_patio_lights
+                rocker_effect: false
+                icon: fluent:lightbulb-24-regular
+                rocker: false
+                orientation: horizontal
+                ted_button_height: half
+              - type: custom:ted-light-card
+                entity: light.garage_main_lights
+                name: Garage
+                rocker_effect: false
+                show_state: false
+                element_order:
+                  - icon
+                  - state
+                  - name
+                icon_scale: 75
+                name_scale: 75
+                icon: fluent:lightbulb-24-regular
+                rocker: false
+                orientation: horizontal
+                ted_button_height: half
+              - type: custom:ted-cover-card
+                entity: cover.garage_door
+                name: Garage
+                icon: mdi:garage-variant
+                icon_open: mdi:garage-alert-variant
+                rocker: false
+                rocker_effect: false
+                icon_scale: 100
+                name_scale: 75
+                state_scale: 75
+                show_hint: false
+                background_open: red
+                icon_tap: more_info
+                orientation: horizontal
+                ted_button_width: 2x
+                ted_button_height: half
+            title: Lights/Covers
+          - buttons:
+              - type: custom:ted-camera-card
+                cameras:
+                  - entity: camera.front_yard_camera
+                    name: Driveway
+                  - entity: camera.front_door_camera
+                    name: Front Door
+                  - entity: camera.front_door_camera_package_camera
+                    name: Package Cam
+                    enabled: false
+                  - entity: camera.garage_camera_high_resolution_channel
+                    name: Garage
+                    enabled: false
+                  - entity: camera.backyard
+                    name: Backyard
+                layout: big-small
+                show_name: true
+                name_size: 8
+                big_small_width: 33
+                ted_button_width: full
+                ted_button_height: 2x
+            title: Security Cams
+        name: Outside
+  - type: grid
+    cards:
+      - type: vertical-stack
+        cards:
+          - title: Family Calendar
+            entities:
+              - calendar.holidays_in_united_states
+              - calendar.birthdays_2
+              - calendar.family
+              - calendar.chanisha_s_gmail_com
+              - calendar.ted_outlook_calendar
+              - calendar.hockey_canadian_bacon
+              - calendar.hockey_maple_bars
+            default_view: agenda
+            first_day_of_week: 0
+            week_days:
+              - 0
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+            week_start_hour: 6
+            week_end_hour: 23
+            lock_schedule_hours: true
+            hide_the_past: false
+            past_event_mode: muted
+            disable_swipe_controls: false
+            show_all_events_month: false
+            show_all_details_month: false
+            hide_empty_days: false
+            agenda_compact_events: true
+            shorten_event_times: true
+            display_full_weekday_names: true
+            compact_width: true
+            show_current_time_bar: true
+            show_event_location: true
+            use_short_location: true
+            event_location_font_size: 9
+            background_opacity: 0
+            header_background_opacity: 0
+            event_calendar_friendly_name: false
+            event_title_prefix: none
+            combine_style: bars
+            combine_background: primary
+            event_color_mode: left-tint
+            event_neutral_background: "#F8F3E9"
+            event_tint_opacity: 85
+            event_color_bar_width: 6
+            day_badges: []
+            hide_calendars: false
+            hide_header: true
+            hide_year: false
+            hide_controls: false
+            hide_navigation_buttons: false
+            hide_add_event_button: false
+            hide_view_selector: false
+            hide_dark_mode_toggle: false
+            show_dashboard_nav_button: false
+            header_dashboard_path: null
+            header_weather_sensor: weather.forecast_home
+            calendar_person_entities:
+              calendar.chanisha_s_gmail_com: person.chanisha_somatilaka
+              calendar.ted_outlook_calendar: person.ted_roberts
+              calendar.family: person.wallpanel
+            default_hidden_calendars: []
+            color_scheme: auto
+            enable_event_management: true
+            event_modal_size: medium
+            type: custom:daylight-calendar-card
+            rolling_days_week_compact: 6
+            rolling_days_schedule: 6
+            rolling_days_agenda: 4
+            compact_height: false
+            compact_header: true
+            hide_calendar_names: true
+            header_background_transparent: false
+            background_transparent: false
+            colors:
+              calendar.birthdays_2: "#00c700"
+              calendar.chanisha_s_gmail_com: "#9c5fff"
+              calendar.family: "#738eb0"
+              calendar.hockey_canadian_bacon: "#0050ff"
+              calendar.hockey_maple_bars: "#0050ff"
+              calendar.holidays_in_united_states: "#F7DC6F"
+              calendar.ted_outlook_calendar: "#43a1ce"
+            calendar_names:
+              calendar.chanisha_s_gmail_com: Chanisha Calendar
+              calendar.ted_outlook_calendar: Ted Calendar
+            combine_calendars: true
+            combine_calendars_width: 6
+            readonly_calendars:
+              - calendar.birthdays_2
+              - calendar.chanisha_s_gmail_com
+              - calendar.hockey_canadian_bacon
+              - calendar.hockey_maple_bars
+              - calendar.holidays_in_united_states
+              - calendar.ted_outlook_calendar
+            virtual_calendars:
+              - id: virtual_1
+                name: Ted
+                icon: null
+                color: "#578eb5"
+                entities:
+                  - calendar.hockey_canadian_bacon
+                  - calendar.hockey_maple_bars
+                  - calendar.ted_outlook_calendar
+            hide_times_for_calendars:
+              - calendar.holidays_in_united_states
+              - calendar.birthdays_2
+            calendar_badge_icons:
+              calendar.holidays_in_united_states: mdi:beach
+              calendar.birthdays_2: mdi:balloon
+            hide_event_calendar_bubble: true
+            use_24hr_schedule: false
+        card_mod:
+          style: >
+            :host { height: calc(100dvh - var(--ted-navbar-bottom-reserve,
+            48px) - 98px) !important; }
+
+
+            /* Let the calendar element size to its content so flex-end can
+            push it
+               down; without this it stays 100% tall and stays top-anchored. */
+            daylight-calendar-card { height: auto !important; }
+
+            .calendar-container {
+              /* Grow to fit the events, capped at the same height as the stack box. */
+              height: auto !important;
+              min-height: 0 !important;
+              max-height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px) - 48px) !important;
+              overflow: hidden !important;
+              background: var(--ha-card-background) !important;
+              backdrop-filter: var(--ha-card-backdrop-filter, none) !important;
+              -webkit-backdrop-filter: var(--ha-card-backdrop-filter, none) !important;
+            }
+
+            .calendar-body::before { background: transparent !important; }
+
+            .agenda-container, .calendar-grid, .week-compact-container,
+            .week-standard-container {
+              max-height: 100% !important;
+              overflow-y: auto !important;
+            }
+max_columns: 4
+title: Home (Tablet Portrait)
+icon: streamline-ultimate-color:graphic-tablet-draw
+path: home-tablet
+cards: []
+footer:
+  card: !include navbar.yaml

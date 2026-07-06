@@ -1,0 +1,128 @@
+# Shared Ted's Navbar — the SINGLE source for the bar across every view.
+# Each view pulls it with `!include navbar.yaml` (relative to this directory).
+# YAML anchors can't cross files, so this file replaces the old &ted_navbar anchor.
+# The bar is position:fixed, so each view's included copy reads as one continuous navbar.
+type: custom:ted-navbar-card
+sections:
+  - placement: left
+    align: left
+    items:
+      - type: date
+        date_format: custom
+        date_format_custom: MMMM D
+      - type: weather
+        entity: weather.forecast_home
+  - placement: left
+    align: left
+    items:
+      - type: custom:ted-button-card
+        icon_scale: 140
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /dashboard-testdash
+        name: NishDash
+        icon: streamline-ultimate-color:arrow-button-circle-left
+        background: light-grey
+      - type: custom:ted-button-card
+        icon_scale: 140
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: call-service
+          service: browser_mod.refresh
+          data:
+            browser_id: this
+        name: Refresh
+        icon: streamline-freehand-color:retouch-magic-wand
+        background: light-grey
+  - placement: center
+    align: center
+    items:
+      - type: custom:ted-button-card
+        icon_scale: 140
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /ted-dashboard
+        name: Home-Tablet
+        icon: streamline-freehand-color:home-chimney-2
+        background: light-grey
+      - type: custom:ted-button-card
+        icon_scale: 130
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /ted-dashboard/calendar-tablet
+        name: Calendar-Full
+        icon: streamline-freehand-color:calendar-grid
+        background: light-grey
+      - type: custom:ted-button-card
+        icon: streamline-freehand-color:calendar-date
+        icon_scale: 140
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /ted-dashboard/calendar-week
+        name: Calendar-Week
+        background: light-grey
+      - type: custom:ted-button-card
+        icon_scale: 140
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /ted-dashboard/mediaroom-wallpanel
+        name: MediaRoom-Wallpanel
+        icon: streamline-freehand-color:movies-clapboard
+        background: light-grey
+  - placement: right
+    align: right
+    items:
+      - type: custom:ted-button-card
+        icon_scale: 125
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /home
+        name: Timer
+        entity: sensor.teds_timers
+        highlight:
+          entity: sensor.teds_timers
+          rules:
+            - operator: ">"
+              value: 0
+              icon_color: accent
+        icon: streamline-freehand-color:time-stopwatch
+        background: light-grey
+      - type: custom:ted-button-card
+        icon: streamline-freehand-color:alert-alarm-clock
+        icon_scale: 125
+        icon_color: none
+        transparency: 25
+        tap_action:
+          action: navigate
+          navigation_path: /home
+        name: Alarms
+        entity: sensor.teds_alarms
+        badge:
+          entity: sensor.teds_alarms
+        highlight:
+          entity: sensor.teds_alarms
+          rules:
+            - operator: ">"
+              value: 0
+              icon_color: accent
+        background: light-grey
+  - placement: right
+    align: right
+    items:
+      - type: notifications
+        icon: fluent:alert-24-regular
+        hide_when_empty: true
+      - type: time

@@ -1,0 +1,8 @@
+# This repo's root maps onto Home Assistant's /config via the Git pull add-on.
+# Track ONLY the dashboards tree; ignore everything else that lives in /config
+# (secrets, .storage, database, etc.). Whitelist approach: ignore all top-level
+# entries, then re-include just what belongs to this repo.
+/*
+!/dashboards/
+!/.gitignore
+!/README.md
