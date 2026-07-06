@@ -45,7 +45,7 @@ sections:
           action: call-service
           service: script.deploy_dashboard
         name: Deploy
-        icon: streamline-freehand-color:cloud-upload
+        icon: streamline-ultimate-color:github-logo-1
         background: light-grey
   - placement: center
     align: center
