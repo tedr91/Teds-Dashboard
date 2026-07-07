@@ -39,8 +39,7 @@ cards:
               icon_color: none
               width: 200
               height: 48
-              transparency: 25
-              background: light-grey
+              theme: ha
               tap_action:
                 action: fire-dom-event
                 ted_add: alarm
@@ -70,8 +69,7 @@ cards:
               icon_color: none
               width: 200
               height: 48
-              transparency: 25
-              background: light-grey
+              theme: ha
               element_order:
                 - icon
                 - name
