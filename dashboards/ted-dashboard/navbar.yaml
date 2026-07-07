@@ -104,6 +104,8 @@ sections:
         entity: sensor.teds_timers
         highlight:
           entity: sensor.teds_timers
+          count_attribute: active
+          area_scoped: true
           rules:
             - operator: ">"
               value: 0
@@ -122,8 +124,12 @@ sections:
         entity: sensor.teds_alarms
         badge:
           entity: sensor.teds_alarms
+          count_attribute: alarms
+          area_scoped: true
         highlight:
           entity: sensor.teds_alarms
+          count_attribute: alarms
+          area_scoped: true
           rules:
             - operator: ">"
               value: 0
