@@ -16,3 +16,4 @@ views:
   - !include ted-dashboard/view-calendar-week.yaml
   - !include ted-dashboard/view-mediaroom.yaml
   - !include ted-dashboard/view-alarm.yaml
+  - !include ted-dashboard/view-settings.yaml
