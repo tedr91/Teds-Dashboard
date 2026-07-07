@@ -102,6 +102,10 @@ sections:
           navigation_path: /ted-dashboard/alarm?tab=timers
         name: Timer
         entity: sensor.teds_timers
+        badge:
+          entity: sensor.teds_timers
+          count_attribute: active
+          area_scoped: true
         highlight:
           entity: sensor.teds_timers
           count_attribute: active
