@@ -22,6 +22,7 @@ cards:
   - type: custom:ted-tab-card
     view_layout:
       grid-area: tabs
+    scale: 125
     default_tab: 0
     url_param: tab
     tabs:
@@ -36,7 +37,7 @@ cards:
               show_name: true
               icon: mdi:alarm-plus
               icon_color: none
-              width: 250
+              width: 200
               height: 48
               transparency: 25
               background: light-grey
@@ -67,7 +68,7 @@ cards:
               icon: mdi:timer-plus-outline
               icon_scale: 100
               icon_color: none
-              width: 250
+              width: 200
               height: 48
               transparency: 25
               background: light-grey
