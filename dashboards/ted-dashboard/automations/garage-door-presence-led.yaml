@@ -1,0 +1,42 @@
+alias: Garage Door → Presence Sensor R3 LED
+description: RED=open, ORANGE=moving/ajar, OFF=closed
+triggers:
+  - trigger: state
+    entity_id: cover.garage_door
+  - trigger: homeassistant
+    event: start
+conditions: []
+actions:
+  - choose:
+      # 1) OPEN → solid RED
+      - conditions:
+          - condition: state
+            entity_id: cover.garage_door
+            state: "open"
+        sequence:
+          - action: light.turn_on
+            target:
+              entity_id: light.primary_bedroom_thirdreality_presence_with_led
+            data:
+              rgb_color: [255, 0, 0]
+              brightness_pct: 100
+      # 2) NOT closed (opening / closing / partially open) → ORANGE
+      - conditions:
+          - condition: not
+            conditions:
+              - condition: state
+                entity_id: cover.garage_door
+                state: "closed"
+        sequence:
+          - action: light.turn_on
+            target:
+              entity_id: light.primary_bedroom_thirdreality_presence_with_led
+            data:
+              rgb_color: [255, 140, 0]
+              brightness_pct: 100
+    # 3) CLOSED → LED off
+    default:
+      - action: light.turn_off
+        target:
+          entity_id: light.primary_bedroom_thirdreality_presence_with_led
+mode: restart
