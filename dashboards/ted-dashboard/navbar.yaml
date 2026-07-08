@@ -126,6 +126,6 @@ sections:
     items:
       - type: timers
       - type: alarms
-      - type: notifications
       - type: datetime
         display: time
+      - type: notifications
