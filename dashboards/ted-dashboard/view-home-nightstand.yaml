@@ -1,19 +1,16 @@
 # View: Home (Nightstand) — placeholder (custom:grid-layout). path: home-nightstand
-# Uses the Welcome view's clock + content layout. The content area holds a
-# MessageBox card as the placeholder. Navbar is a plain card (position:fixed).
+# Clock (left) + content (right) side-by-side. Clock is at least 60% wide (grows to
+# fill when content is narrow); content is 0–40%. The navbar auto-hides on this view.
 type: custom:grid-layout
 path: home-nightstand
 title: Home (Nightstand)
-icon: mdi:bed
+icon: streamline-ultimate-color:night-moon-begin
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: 1fr
-  grid-template-rows: >-
-    minmax(100px, calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25))
-    calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.75)
+  grid-template-columns: minmax(60%, 1fr) minmax(0, 40%)
+  grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
-    "clock"
-    "content"
+    "clock content"
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
@@ -36,7 +33,7 @@ cards:
     view_layout:
       grid-area: content
     severity: info
-    icon: mdi:bed
+    icon: streamline-ultimate-color:night-moon-begin
     title: Home (Nightstand)
     message: This is a placeholder view. Content coming soon.
-  - !include navbar.yaml
+  - !include navbar-autohide.yaml

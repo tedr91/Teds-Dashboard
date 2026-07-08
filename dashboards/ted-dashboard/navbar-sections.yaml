@@ -1,0 +1,128 @@
+# Shared Ted's Navbar sections - the SINGLE source of the bar's contents.
+# Referenced by navbar.yaml (normal) and navbar-autohide.yaml (auto-hide) via
+# 'sections: !include navbar-sections.yaml', so both bars share one item list.
+- placement: left
+  align: left
+  items:
+    - type: datetime
+      display: date
+      date_format: ddd, MMMM D
+    - type: weather
+      entity: weather.forecast_home
+- placement: left
+  align: left
+  items:
+    - type: custom:ted-expandable-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 25
+      name: Debug Utils
+      icon: fluent:chevron-up-24-regular
+      background: light-grey
+      items:
+        - type: custom:ted-button-card
+          icon_color: none
+          transparency: 25
+          tap_action:
+            action: navigate
+            navigation_path: /dashboard-testdash
+          name: NishDash
+          icon: streamline-ultimate-color:arrow-button-circle-left
+          background: light-grey
+        - type: custom:ted-button-card
+          icon_color: none
+          transparency: 25
+          tap_action:
+            action: call-service
+            service: browser_mod.refresh
+            data:
+              browser_id: this
+          name: Refresh
+          icon: streamline-freehand-color:retouch-magic-wand
+          background: light-grey
+        - type: custom:ted-button-card
+          icon_color: none
+          transparency: 25
+          tap_action:
+            action: call-service
+            service: script.git_pull_sync
+          name: Git Pull
+          icon: streamline-ultimate-color:github-logo-1
+          background: light-grey
+- placement: center
+  align: center
+  items:
+    - type: custom:ted-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 25
+      tap_action:
+        action: navigate
+        navigation_path: /ted-dashboard
+      name: Home-Tablet
+      icon: streamline-freehand-color:home-chimney-2
+      background: light-grey
+    - type: custom:ted-button-card
+      icon_scale: 130
+      icon_color: none
+      transparency: 25
+      tap_action:
+        action: navigate
+        navigation_path: /ted-dashboard/calendar-month
+      name: Calendar-Full
+      icon: streamline-freehand-color:calendar-grid
+      background: light-grey
+    - type: custom:ted-button-card
+      icon: streamline-freehand-color:calendar-date
+      icon_scale: 140
+      icon_color: none
+      transparency: 25
+      tap_action:
+        action: navigate
+        navigation_path: /ted-dashboard/calendar-week
+      name: Calendar-Week
+      background: light-grey
+    - type: custom:ted-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 25
+      tap_action:
+        action: navigate
+        navigation_path: /ted-dashboard/mediaroom-wallpanel
+      name: MediaRoom-Wallpanel
+      icon: streamline-freehand-color:movies-clapboard
+      background: light-grey
+    - type: custom:ted-button-card
+      icon: streamline-freehand-color:alert-alarm-clock
+      icon_scale: 125
+      icon_color: none
+      transparency: 25
+      tap_action:
+        action: navigate
+        navigation_path: /ted-dashboard/alarms-timers
+      name: Alarms
+      entity: sensor.teds_alarms
+      badge:
+        entity: sensor.teds_alarms
+        count_attribute: alarms
+        area_scoped: true
+      highlight:
+        entity: sensor.teds_alarms
+        count_attribute: alarms
+        area_scoped: true
+        rules:
+          - operator: ">"
+            value: 0
+            icon_color: accent
+      background: light-grey
+- placement: right
+  align: right
+  items: []
+- placement: right
+  align: right
+  items:
+    - type: timers
+    - type: alarms
+    - type: datetime
+      display: time
+    - type: notifications

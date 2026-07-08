@@ -4,7 +4,7 @@
 type: custom:grid-layout
 path: info
 title: Info
-icon: mdi:information
+icon: streamline-ultimate-color:information-circle
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
@@ -36,7 +36,7 @@ cards:
     view_layout:
       grid-area: content
     severity: info
-    icon: mdi:information
+    icon: streamline-ultimate-color:information-circle
     title: Info
     message: This is a placeholder view. Content coming soon.
   - !include navbar.yaml

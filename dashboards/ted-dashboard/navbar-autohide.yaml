@@ -1,0 +1,6 @@
+# Auto-hiding Ted's Navbar - same contents as navbar.yaml, collapsed into the edge
+# (a small pill remains) until revealed. For views that want the bar out of the way
+# (e.g. the nightstand view). Shares navbar-sections.yaml with the normal bar.
+type: custom:ted-navbar-card
+auto_hide: true
+sections: !include navbar-sections.yaml
