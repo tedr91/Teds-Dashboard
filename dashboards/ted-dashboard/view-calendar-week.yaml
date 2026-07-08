@@ -29,6 +29,11 @@ cards:
     weather_size_custom: 90
     view_layout:
       grid-area: clock
+    card_mod:
+      style: |
+        .cwc {
+          padding: 5px !important;
+        }
   - type: vertical-stack
     cards:
       - title: Family Calendar
