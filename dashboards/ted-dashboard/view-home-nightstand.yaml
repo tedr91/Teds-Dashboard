@@ -4,7 +4,7 @@
 type: custom:grid-layout
 path: home-nightstand
 title: Home (Nightstand)
-icon: streamline-ultimate-color:night-moon-begin
+icon: cbi:echo-show-5-gen-2
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: minmax(60%, 1fr) minmax(0, 40%)
@@ -33,7 +33,7 @@ cards:
     view_layout:
       grid-area: content
     severity: info
-    icon: streamline-ultimate-color:night-moon-begin
+    icon: cbi:echo-show-5-gen-2
     title: Home (Nightstand)
     message: This is a placeholder view. Content coming soon.
   - !include navbar-autohide.yaml

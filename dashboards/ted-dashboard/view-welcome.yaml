@@ -12,7 +12,7 @@
 type: custom:grid-layout
 path: welcome
 title: Welcome
-icon: streamline-ultimate-color:launch-go
+icon: streamline-ultimate-color:house-chimney
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
