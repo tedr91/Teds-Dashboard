@@ -5,7 +5,7 @@
 type: custom:grid-layout
 path: settings
 title: Settings
-icon: fluent-color:settings-24
+icon: streamline-ultimate-color:cog
 layout:
   height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
