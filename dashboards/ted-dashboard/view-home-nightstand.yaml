@@ -16,12 +16,13 @@ layout:
   box-sizing: border-box
 cards:
   - type: custom:ted-clock-weather-card
-    clock_size: custom
-    clock_size_custom: 95
+    theme: ha
+    clock_size: extra_large
+    clock_offset: 50
+    date_offset: 50
     weather_size: custom
-    weather_size_custom: 95
-    date_size: custom
-    date_size_custom: 95
+    weather_size_custom: 75
+    weather_entity: weather.forecast_home
     view_layout:
       grid-area: clock
     card_mod:
@@ -29,11 +30,4 @@ cards:
         .cwc {
           padding: 8px !important;
         }
-  - type: custom:ted-messagebox-card
-    view_layout:
-      grid-area: content
-    severity: info
-    icon: cbi:echo-show-5-gen-2
-    title: Home (Nightstand)
-    message: This is a placeholder view. Content coming soon.
   - !include navbar-autohide.yaml
