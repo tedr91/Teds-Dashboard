@@ -6,7 +6,7 @@
 #   var(--kiosk-header-height, var(--header-height, 56px))
 # kiosk-mode sets --kiosk-header-height:0 on #view (so kiosk = viewport - navbar),
 # while non-kiosk falls back to the real --header-height (so = viewport - navbar - header).
-# Clock: min 100px, max 20% of that height. Calendar: 75% of that height.
+# Clock: min 100px, max 25% of that height. Calendar: 75% of that height.
 type: custom:grid-layout
 path: calendar-week
 title: Calendar-WeekView
@@ -34,7 +34,7 @@ cards:
     card_mod:
       style: |
         .cwc {
-          padding: 5px !important;
+          padding: 8px !important;
         }
   - type: vertical-stack
     cards:
