@@ -24,10 +24,9 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - clock_size: small
+  - type: custom:ted-clock-weather-card
     weather_size: custom
     weather_size_custom: 90
-    type: custom:ted-clock-weather-card
     view_layout:
       grid-area: clock
   - type: vertical-stack

@@ -9,7 +9,7 @@ sections:
     items:
       - type: datetime
         display: date
-        date_format: MMMM D
+        date_format: ddd, MMMM D
       - type: weather
         entity: weather.forecast_home
   - placement: left
