@@ -7,46 +7,55 @@ sections:
   - placement: left
     align: left
     items:
-      - type: date
-        date_format: custom
-        date_format_custom: MMMM D
+      - type: datetime
+        display: date
+        date_format: MMMM D
       - type: weather
         entity: weather.forecast_home
   - placement: left
     align: left
     items:
-      - type: custom:ted-button-card
+      - type: custom:ted-expandable-button-card
         icon_scale: 140
         icon_color: none
         transparency: 25
-        tap_action:
-          action: navigate
-          navigation_path: /dashboard-testdash
-        name: NishDash
-        icon: streamline-ultimate-color:arrow-button-circle-left
+        name: More
+        icon: mdi:dots-horizontal
         background: light-grey
-      - type: custom:ted-button-card
-        icon_scale: 140
-        icon_color: none
-        transparency: 25
-        tap_action:
-          action: call-service
-          service: browser_mod.refresh
-          data:
-            browser_id: this
-        name: Refresh
-        icon: streamline-freehand-color:retouch-magic-wand
-        background: light-grey
-      - type: custom:ted-button-card
-        icon_scale: 140
-        icon_color: none
-        transparency: 25
-        tap_action:
-          action: call-service
-          service: script.git_pull_sync
-        name: Git Pull
-        icon: streamline-ultimate-color:github-logo-1
-        background: light-grey
+        popup_title: More
+        items:
+          - type: custom:ted-button-card
+            icon_scale: 140
+            icon_color: none
+            transparency: 25
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-testdash
+            name: NishDash
+            icon: streamline-ultimate-color:arrow-button-circle-left
+            background: light-grey
+          - type: custom:ted-button-card
+            icon_scale: 140
+            icon_color: none
+            transparency: 25
+            tap_action:
+              action: call-service
+              service: browser_mod.refresh
+              data:
+                browser_id: this
+            name: Refresh
+            icon: streamline-freehand-color:retouch-magic-wand
+            background: light-grey
+          - type: custom:ted-button-card
+            icon_scale: 140
+            icon_color: none
+            transparency: 25
+            tap_action:
+              action: call-service
+              service: script.git_pull_sync
+            name: Git Pull
+            icon: streamline-ultimate-color:github-logo-1
+            background: light-grey
   - placement: center
     align: center
     items:
@@ -90,32 +99,6 @@ sections:
         name: MediaRoom-Wallpanel
         icon: streamline-freehand-color:movies-clapboard
         background: light-grey
-  - placement: right
-    align: right
-    items:
-      - type: custom:ted-button-card
-        icon_scale: 125
-        icon_color: none
-        transparency: 25
-        tap_action:
-          action: navigate
-          navigation_path: /ted-dashboard/alarms-timers?tab=timers
-        name: Timer
-        entity: sensor.teds_timers
-        badge:
-          entity: sensor.teds_timers
-          count_attribute: active
-          area_scoped: true
-        highlight:
-          entity: sensor.teds_timers
-          count_attribute: active
-          area_scoped: true
-          rules:
-            - operator: ">"
-              value: 0
-              icon_color: accent
-        icon: streamline-freehand-color:time-stopwatch
-        background: light-grey
       - type: custom:ted-button-card
         icon: streamline-freehand-color:alert-alarm-clock
         icon_scale: 125
@@ -123,7 +106,7 @@ sections:
         transparency: 25
         tap_action:
           action: navigate
-          navigation_path: /ted-dashboard/alarms-timers?tab=alarms
+          navigation_path: /ted-dashboard/alarms-timers
         name: Alarms
         entity: sensor.teds_alarms
         badge:
@@ -141,8 +124,12 @@ sections:
         background: light-grey
   - placement: right
     align: right
+    items: []
+  - placement: right
+    align: right
     items:
+      - type: timers
+      - type: alarms
       - type: notifications
-        icon: fluent:alert-24-regular
-        hide_when_empty: true
-      - type: time
+      - type: datetime
+        display: time
