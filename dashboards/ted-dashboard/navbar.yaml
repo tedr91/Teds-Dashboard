@@ -19,13 +19,10 @@ sections:
         icon_scale: 140
         icon_color: none
         transparency: 25
-        name: More
-        icon: mdi:dots-horizontal
         background: light-grey
         popup_title: More
         items:
           - type: custom:ted-button-card
-            icon_scale: 140
             icon_color: none
             transparency: 25
             tap_action:
@@ -35,7 +32,6 @@ sections:
             icon: streamline-ultimate-color:arrow-button-circle-left
             background: light-grey
           - type: custom:ted-button-card
-            icon_scale: 140
             icon_color: none
             transparency: 25
             tap_action:
@@ -47,7 +43,6 @@ sections:
             icon: streamline-freehand-color:retouch-magic-wand
             background: light-grey
           - type: custom:ted-button-card
-            icon_scale: 140
             icon_color: none
             transparency: 25
             tap_action:
