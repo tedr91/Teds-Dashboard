@@ -49,7 +49,7 @@ cards:
       grid-area: content
     content: |
       {% if states.sensor.teds_settings is none %}
-      ## 👋 Welcome to Ted Dashboard
+      ## 👋 Welcome to the Ted Dashboard system
 
       To unlock **alarms, timers, notifications, and per‑device settings**, install the **Ted's Cards Backend** integration.
 
@@ -61,7 +61,7 @@ cards:
 
       _This page updates on its own once the integration is detected._
       {% else %}
-      ## 👋 Welcome back
+      ## 👋 Welcome!
 
       Ted's Cards Backend is installed and ready. Where would you like to go?
 
@@ -69,8 +69,6 @@ cards:
 
       **More**
       - ⚙️ [Settings](/ted-dashboard/settings)
-      - ⏰ [Alarms & Timers](/ted-dashboard/alarms-timers)
-      - 📅 [Calendar](/ted-dashboard/calendar-week)
       {% endif %}
     card_mod:
       style: |
