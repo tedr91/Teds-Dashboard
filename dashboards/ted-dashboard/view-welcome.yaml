@@ -1,0 +1,82 @@
+# View: Welcome (custom:grid-layout) — path: welcome
+# The dashboard's DEFAULT landing page (first view). Reuses the calendar-week
+# layout: the top "clock" section stays; the bottom "content" section is an
+# informational panel that guides setup (e.g. installing Ted's Cards Backend)
+# and points to the right home view.
+#
+# Effective view height = viewport - navbar - header, where the "header" term is
+#   var(--kiosk-header-height, var(--header-height, 56px))
+# kiosk-mode sets --kiosk-header-height:0 on #view (kiosk = viewport - navbar),
+# non-kiosk falls back to the real --header-height (viewport - navbar - header).
+# Clock: min 100px, 25% of that height. Content: 75% of that height.
+type: custom:grid-layout
+path: welcome
+title: Welcome
+icon: mdi:hand-wave
+layout:
+  height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
+  grid-template-columns: 1fr
+  grid-template-rows: >-
+    minmax(100px, calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25))
+    calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.75)
+  grid-template-areas: |
+    "clock"
+    "content"
+  grid-gap: 12px
+  padding: 12px
+  box-sizing: border-box
+cards:
+  # Clock section — kept identical to the calendar-week view.
+  - type: custom:ted-clock-weather-card
+    clock_size: custom
+    clock_size_custom: 95
+    weather_size: custom
+    weather_size_custom: 95
+    date_size: custom
+    date_size_custom: 95
+    view_layout:
+      grid-area: clock
+    card_mod:
+      style: |
+        .cwc {
+          padding: 8px !important;
+        }
+  # Content section — informational landing page. The markdown template branches
+  # on whether the Ted's Cards Backend integration is installed (detected via
+  # sensor.teds_settings). It re-renders automatically once that entity appears.
+  - type: markdown
+    view_layout:
+      grid-area: content
+    content: |
+      {% if states.sensor.teds_settings is none %}
+      ## 👋 Welcome to Ted Dashboard
+
+      To unlock **alarms, timers, notifications, and per‑device settings**, install the **Ted's Cards Backend** integration.
+
+      ### Install it (via HACS)
+      1. Open **HACS**, then the **⋮** menu (top‑right) → **Custom repositories**.
+      2. Add the repository `https://github.com/tedr91/Teds-Cards-Backend` — Category: **Integration**.
+      3. Find **Ted's Cards Backend** in HACS → **Download**, then **restart Home Assistant**.
+      4. Go to **Settings → Devices & Services → ➕ Add Integration**, search **Ted's Cards Backend**, and add it.
+
+      _This page updates on its own once the integration is detected._
+      {% else %}
+      ## 👋 Welcome back
+
+      Ted's Cards Backend is installed and ready. Where would you like to go?
+
+      ### 🏠 [Go to Home](/ted-dashboard/home-tablet)
+
+      **More**
+      - ⚙️ [Settings](/ted-dashboard/settings)
+      - ⏰ [Alarms & Timers](/ted-dashboard/alarms-timers)
+      - 📅 [Calendar](/ted-dashboard/calendar-week)
+      {% endif %}
+    card_mod:
+      style: |
+        ha-card {
+          height: 100%;
+          overflow-y: auto;
+          box-sizing: border-box;
+        }
+  - !include navbar.yaml
