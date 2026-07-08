@@ -15,10 +15,21 @@ This repository's **root maps onto `/config`**. The Git pull add-on clones/pulls
     ted-dashboard/               -> /config/dashboards/ted-dashboard/        (partials)
       kiosk.yaml
       navbar.yaml                (shared Ted's Navbar — single source)
-      view-home-tablet.yaml
-      view-calendar-tablet.yaml
+      view-welcome.yaml
+      view-home-nightstand.yaml
+      view-home-wallpanel-h.yaml
+      view-home-wallpanel-v.yaml
+      view-home-handheld.yaml
+      view-cameras.yaml
+      view-info.yaml
+      view-climate.yaml
+      view-weather.yaml
+      view-music.yaml
+      view-calendar-month.yaml
       view-calendar-week.yaml
       view-mediaroom.yaml
+      view-alarms-timers.yaml
+      view-settings.yaml
 ```
 
 Only `dashboards/**` is tracked; everything else in `/config` (secrets, `.storage`, the

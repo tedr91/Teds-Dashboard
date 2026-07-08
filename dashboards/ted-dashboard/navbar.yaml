@@ -71,7 +71,7 @@ sections:
         transparency: 25
         tap_action:
           action: navigate
-          navigation_path: /ted-dashboard/calendar-tablet
+          navigation_path: /ted-dashboard/calendar-month
         name: Calendar-Full
         icon: streamline-freehand-color:calendar-grid
         background: light-grey

@@ -48,9 +48,9 @@ cards:
     view_layout:
       grid-area: content
     content: |
-      {% if states.sensor.teds_settings is none %}
       ## 👋 Welcome to the Ted Dashboard system
 
+      {% if states.sensor.teds_settings is none %}
       To unlock **alarms, timers, notifications, and per‑device settings**, install the **Ted's Cards Backend** integration.
 
       ### Install it (via HACS)
@@ -61,11 +61,7 @@ cards:
 
       _This page updates on its own once the integration is detected._
       {% else %}
-      ## 👋 Welcome!
-
       Ted's Cards Backend is installed and ready. Where would you like to go?
-
-      ### 🏠 [Go to Home](/ted-dashboard/home-tablet)
 
       **More**
       - ⚙️ [Settings](/ted-dashboard/settings)
