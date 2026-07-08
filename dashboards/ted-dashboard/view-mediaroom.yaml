@@ -3,7 +3,7 @@
 type: custom:grid-layout
 path: mediaroom-wallpanel
 title: MediaRoom-Wallpanel
-icon: streamline-ultimate-color:modern-tv-4k
+icon: streamline-ultimate-color:modern-tv-remote
 layout:
   height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr 1fr

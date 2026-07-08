@@ -27,7 +27,7 @@
             action: navigate
             navigation_path: /dashboard-testdash
           name: NishDash
-          icon: streamline-ultimate-color:arrow-button-circle-left
+          icon: streamline-ultimate-color:navigation-left
           background: light-grey
         - type: custom:ted-button-card
           icon_color: none
@@ -38,7 +38,7 @@
             data:
               browser_id: this
           name: Refresh
-          icon: streamline-freehand-color:retouch-magic-wand
+          icon: streamline-ultimate-color:monitor-sync
           background: light-grey
         - type: custom:ted-button-card
           icon_color: none
