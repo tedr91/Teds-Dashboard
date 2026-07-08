@@ -25,6 +25,10 @@ layout:
   box-sizing: border-box
 cards:
   - type: custom:ted-clock-weather-card
+    weather_size: custom
+    weather_size_custom: 90
+    date_size: custom
+    date_size_custom: 95
     view_layout:
       grid-area: clock
     card_mod:
