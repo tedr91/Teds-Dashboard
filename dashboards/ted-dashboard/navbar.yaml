@@ -19,8 +19,9 @@ sections:
         icon_scale: 140
         icon_color: none
         transparency: 25
+        name: Debug Utils
+        icon: fluent:chevron-up-24-regular
         background: light-grey
-        popup_title: More
         items:
           - type: custom:ted-button-card
             icon_color: none
