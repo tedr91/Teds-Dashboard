@@ -27,20 +27,7 @@ layout:
   box-sizing: border-box
 cards:
   # Clock section — kept identical to the calendar-week view.
-  - type: custom:ted-clock-weather-card
-    clock_size: custom
-    clock_size_custom: 95
-    weather_size: custom
-    weather_size_custom: 95
-    date_size: custom
-    date_size_custom: 95
-    view_layout:
-      grid-area: clock
-    card_mod:
-      style: |
-        .cwc {
-          padding: 8px !important;
-        }
+  - !include clock-header.yaml
   # Content section — dependency checks + home-view tip. Detection is done
   # server-side by Ted's Cards Backend (sensor.teds_requirements); each box is
   # gated by a state/attribute condition so it only appears when that dependency

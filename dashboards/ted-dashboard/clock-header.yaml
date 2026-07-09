@@ -1,0 +1,20 @@
+# Shared clock/weather header — the SINGLE source for the "clock" grid area
+# across every standard view. Each view pulls it with:
+#   - !include clock-header.yaml   (relative to this directory)
+# It positions itself into the view's `clock` grid area, so any consuming view
+# must define a `clock` row in its `grid-template-areas`.
+# (home-nightstand keeps its own bespoke split layout and does NOT use this.)
+type: custom:ted-clock-weather-card
+clock_size: custom
+clock_size_custom: 95
+weather_size: custom
+weather_size_custom: 95
+date_size: custom
+date_size_custom: 95
+view_layout:
+  grid-area: clock
+card_mod:
+  style: |
+    .cwc {
+      padding: 8px !important;
+    }

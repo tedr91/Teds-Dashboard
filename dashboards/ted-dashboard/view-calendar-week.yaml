@@ -24,20 +24,7 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - type: custom:ted-clock-weather-card
-    clock_size: custom
-    clock_size_custom: 95
-    weather_size: custom
-    weather_size_custom: 95
-    date_size: custom
-    date_size_custom: 95
-    view_layout:
-      grid-area: clock
-    card_mod:
-      style: |
-        .cwc {
-          padding: 8px !important;
-        }
+  - !include clock-header.yaml
   - type: vertical-stack
     cards:
       - title: Family Calendar
