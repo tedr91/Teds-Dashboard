@@ -6,4 +6,5 @@ type: custom:ted-navbar-card
 theme: ted-style
 transparency: 50
 blur: 50
+menu_items: !include navbar-menu-items.yaml
 sections: !include navbar-sections.yaml

@@ -6,4 +6,5 @@ theme: ted-style
 transparency: 50
 blur: 50
 auto_hide: true
+menu_items: !include navbar-menu-items.yaml
 sections: !include navbar-sections.yaml
