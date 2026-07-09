@@ -3,4 +3,7 @@
 # The bar is position:fixed, so each view's copy reads as one continuous navbar.
 # Contents live in navbar-sections.yaml (shared with the auto-hide variant).
 type: custom:ted-navbar-card
+theme: ted-style
+transparency: 50
+blur: 50
 sections: !include navbar-sections.yaml
