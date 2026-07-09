@@ -31,6 +31,17 @@ cards:
         slug: alarms
         card:
           type: vertical-stack
+          card_mod:
+            style: |
+              :host { height: 100%; }
+              #root {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                overflow: hidden;
+              }
+              #root > :last-child { flex: 1 1 auto; min-height: 0; overflow: auto; }
           cards:
             - type: custom:ted-button-card
               name: + Add Alarm
@@ -58,6 +69,17 @@ cards:
         slug: timers
         card:
           type: vertical-stack
+          card_mod:
+            style: |
+              :host { height: 100%; }
+              #root {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                overflow: hidden;
+              }
+              #root > :last-child { flex: 1 1 auto; min-height: 0; overflow: auto; }
           cards:
             - type: custom:ted-button-card
               name: + Add Timer

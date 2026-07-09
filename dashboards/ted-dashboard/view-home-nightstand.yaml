@@ -37,6 +37,12 @@ cards:
           right: 0;
           transform: translateY(-50%);
         }
+        /* DEBUG: gated by the Ted's Cards "Debug mode" setting, which publishes
+           `--ted-debug: solid` on the document root (else unset -> outlines are
+           `none`). `outline` doesn't add to the box size, so it won't shift the
+           layout being debugged. Toggle it in Settings -> General. */
+        :host { outline: 2px var(--ted-debug, none) magenta !important; }
+        #root > * { outline: 2px var(--ted-debug, none) red !important; }
     cards:
       - type: custom:ted-clock-weather-card
         weather_entity: weather.forecast_home
@@ -45,6 +51,9 @@ cards:
         card_mod:
           style: |
             .cwc { padding: 8px !important; }
+            /* DEBUG (gated by the "Debug mode" setting via --ted-debug) */
+            ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
+            .cwc { outline: 1px var(--ted-debug, none) lime !important; }
       - type: custom:ted-clock-weather-card
         clock_offset: 50
         clock_size: extra_large
@@ -55,4 +64,7 @@ cards:
         card_mod:
           style: |
             .cwc { padding: 8px !important; }
+            /* DEBUG (gated by the "Debug mode" setting via --ted-debug) */
+            ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
+            .cwc { outline: 1px var(--ted-debug, none) lime !important; }
   - !include navbar-autohide.yaml
