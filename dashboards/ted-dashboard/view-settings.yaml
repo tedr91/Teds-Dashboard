@@ -16,13 +16,6 @@ layout:
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
-card_mod:
-  style: |
-    /* DEBUG: gated by the "Debug mode" setting (--ted-debug); outlines each
-       grid-area card. Toggle in Settings -> General. */
-    #root > * {
-      outline: 2px var(--ted-debug, none) red !important;
-    }
 cards:
   - type: vertical-stack
     view_layout:
@@ -46,15 +39,24 @@ cards:
       # One tab per logical settings section.
       - type: custom:ted-tab-card
         tabs:
-          - label: Timers
-            icon: mdi:timer-outline
-            card: { type: custom:ted-settings-card, sections: [Timers], scope: shared, show_header: false }
-          - label: Alarms
-            icon: mdi:alarm
-            card: { type: custom:ted-settings-card, sections: [Alarms], scope: shared, show_header: false }
+          - label: General
+            icon: mdi:tune
+            card: { type: custom:ted-settings-card, sections: [General], scope: shared, show_header: false }
+          - label: Navigation
+            icon: mdi:navigation-variant-outline
+            card: { type: custom:ted-settings-card, sections: [Navigation], scope: shared, show_header: false }
+          - label: Navbar
+            icon: mdi:dock-bottom
+            card: { type: custom:ted-settings-card, sections: [Navbar], scope: shared, show_header: false }
           - label: Notifications
             icon: mdi:bell-outline
             card: { type: custom:ted-settings-card, sections: [Notifications], scope: shared, show_header: false }
+          - label: Alarms
+            icon: mdi:alarm
+            card: { type: custom:ted-settings-card, sections: [Alarms], scope: shared, show_header: false }
+          - label: Timers
+            icon: mdi:timer-outline
+            card: { type: custom:ted-settings-card, sections: [Timers], scope: shared, show_header: false }
           - label: Media
             icon: mdi:play-circle-outline
             card: { type: custom:ted-settings-card, sections: [Media], scope: shared, show_header: false }
@@ -62,13 +64,4 @@ cards:
             icon: mdi:cctv
             slug: cameras
             card: { type: custom:ted-settings-card, sections: [Cameras], scope: shared, show_header: false }
-          - label: Navbar
-            icon: mdi:dock-bottom
-            card: { type: custom:ted-settings-card, sections: [Navbar], scope: shared, show_header: false }
-          - label: General
-            icon: mdi:tune
-            card: { type: custom:ted-settings-card, sections: [General], scope: shared, show_header: false }
-          - label: Navigation
-            icon: mdi:navigation-variant-outline
-            card: { type: custom:ted-settings-card, sections: [Navigation], scope: shared, show_header: false }
   - !include navbar.yaml
