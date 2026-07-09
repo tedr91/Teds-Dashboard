@@ -1,13 +1,15 @@
 # View: Home (Nightstand) — placeholder (custom:grid-layout). path: home-nightstand
-# Clock (left) + content (right) side-by-side. Clock is at least 60% wide (grows to
-# fill when content is narrow); content is 0–40%. The navbar auto-hides on this view.
+# Clock (left) + content (right) side-by-side. Clock is at least 60% wide; the
+# content column uses fit-content(40%) so it caps at 40% when it holds a card but
+# COLLAPSES TO 0 when empty (letting the clock span the full width). The navbar
+# auto-hides on this view.
 type: custom:grid-layout
 path: home-nightstand
 title: Home (Nightstand)
 icon: cbi:echo-show-5-gen-2
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: minmax(60%, 1fr) minmax(0, 40%)
+  grid-template-columns: minmax(60%, 1fr) fit-content(40%)
   grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
     "clock content"
