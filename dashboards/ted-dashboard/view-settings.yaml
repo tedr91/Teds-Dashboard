@@ -51,6 +51,9 @@ cards:
           - label: Media
             icon: mdi:play-circle-outline
             card: { type: custom:ted-settings-card, sections: [Media], scope: shared, show_header: false }
+          - label: Navbar
+            icon: mdi:dock-bottom
+            card: { type: custom:ted-settings-card, sections: [Navbar], scope: shared, show_header: false }
           - label: General
             icon: mdi:tune
             card: { type: custom:ted-settings-card, sections: [General], scope: shared, show_header: false }

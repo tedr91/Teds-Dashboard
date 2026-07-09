@@ -27,7 +27,7 @@ layout:
   box-sizing: border-box
 cards:
   # Clock section — kept identical to the calendar-week view.
-  - !include clock-header.yaml
+  # - !include clock-header.yaml
   # Content section — dependency checks + home-view tip. Detection is done
   # server-side by Ted's Cards Backend (sensor.teds_requirements); each box is
   # gated by a state/attribute condition so it only appears when that dependency
@@ -46,7 +46,7 @@ cards:
       # without them, so a core markdown card carries the warning.
       - type: markdown
         content: |
-          ## 👋 {{ user or 'there' }}, welcome to the Ted Dashboard system!
+          ## 👋 {{ user }}, welcome to the Ted Dashboard system!
 
           {% set lc = state_attr('sensor.teds_requirements','layout_card') %}
           {% set tc = state_attr('sensor.teds_requirements','ted_cards') %}
@@ -57,7 +57,7 @@ cards:
           🟥 **Ted's Cards (frontend) isn't loaded** — install Ted's Cards via HACS and refresh.
           {% endif %}
           {% if states.sensor.teds_settings is not none %}
-          Here's how this device is set up — anything still missing is flagged below. · [⚙️ Settings](/ted-dashboard/settings)
+          Here you can view your status — please address any issues flagged below. · [⚙️ Settings](/ted-dashboard/settings)
           {% endif %}
       # Device status at a glance — dependency/integration counts, this browser's
       # Browser Mod registration + id, backend connection/version, weather and the
@@ -66,7 +66,6 @@ cards:
       # blocker above already covers when it isn't.
       - type: custom:ted-status-card
         theme: ted-style
-        title: This device
       # Backend integration — the funnel; shows only when it's absent (which is
       # also what unlocks every other check below).
       - type: custom:ted-messagebox-card
@@ -189,7 +188,6 @@ cards:
         actions:
           - { label: Use Home (Handheld), icon: mdi:cellphone, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-handheld", navigation_path: /ted-dashboard/home-handheld, variant: primary }
           - { label: Not now, action: dismiss-session }
-          - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
         theme: ted-style
         severity: tip
@@ -203,7 +201,6 @@ cards:
         actions:
           - { label: Use Home (Wall Panel), icon: mdi:monitor, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-h", navigation_path: /ted-dashboard/home-wallpanel-h, variant: primary }
           - { label: Not now, action: dismiss-session }
-          - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
         theme: ted-style
         severity: tip
@@ -217,7 +214,6 @@ cards:
         actions:
           - { label: Use Home (Wall Panel Portrait), icon: mdi:tablet, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-v", navigation_path: /ted-dashboard/home-wallpanel-v, variant: primary }
           - { label: Not now, action: dismiss-session }
-          - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
         theme: ted-style
         severity: tip
@@ -231,5 +227,4 @@ cards:
         actions:
           - { label: Use Home (Nightstand), icon: mdi:bed-clock, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-nightstand", navigation_path: /ted-dashboard/home-nightstand, variant: primary }
           - { label: Not now, action: dismiss-session }
-          - { label: Never show again, action: dismiss }
   - !include navbar.yaml

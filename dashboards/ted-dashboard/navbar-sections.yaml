@@ -17,23 +17,23 @@
     - type: custom:ted-expandable-button-card
       icon_scale: 140
       icon_color: none
-      transparency: 50
+      transparency: 40
       name: Debug Utils
       icon: fluent:chevron-up-24-regular
-      background: grey
+      background: light-grey
       items:
         - type: custom:ted-button-card
           icon_color: none
-          transparency: 50
+          transparency: 40
           tap_action:
             action: navigate
             navigation_path: /dashboard-testdash
           name: NishDash
           icon: streamline-ultimate-color:navigation-left
-          background: grey
+          background: light-grey
         - type: custom:ted-button-card
           icon_color: none
-          transparency: 50
+          transparency: 40
           tap_action:
             action: call-service
             service: browser_mod.refresh
@@ -41,58 +41,58 @@
               browser_id: this
           name: Refresh
           icon: streamline-ultimate-color:monitor-sync
-          background: grey
+          background: light-grey
         - type: custom:ted-button-card
           icon_color: none
-          transparency: 50
+          transparency: 40
           tap_action:
             action: call-service
             service: script.git_pull_sync
           name: Git Pull
           icon: streamline-ultimate-color:github-logo-1
-          background: grey
+          background: light-grey
         - type: custom:ted-button-card
           icon_color: none
-          transparency: 50
+          transparency: 40
           tap_action:
             action: navigate
             navigation_path: /ted-dashboard/settings
           name: Settings
           icon: streamline-ultimate-color:cog
-          background: grey
+          background: light-grey
 - placement: center
   align: center
   items:
     - type: custom:ted-button-card
       icon_scale: 140
       icon_color: none
-      transparency: 50
+      transparency: 40
       tap_action:
         action: navigate-dashboard
         dashboard: home_dashboard
       name: Home-Tablet
       icon: streamline-freehand-color:home-chimney-2
-      background: grey
+      background: light-grey
     - type: custom:ted-button-card
       icon: streamline-freehand-color:calendar-date
       icon_scale: 140
       icon_color: none
-      transparency: 50
+      transparency: 40
       tap_action:
         action: navigate
         navigation_path: /ted-dashboard/calendar-week
       name: Calendar-Week
-      background: grey
+      background: light-grey
     - type: custom:ted-button-card
       icon_scale: 140
       icon_color: none
-      transparency: 50
+      transparency: 40
       tap_action:
         action: navigate
         navigation_path: /ted-dashboard/mediaroom-wallpanel
       name: MediaRoom-Wallpanel
       icon: streamline-freehand-color:movies-clapboard
-      background: grey
+      background: light-grey
 - placement: right
   align: right
   items: []
