@@ -192,7 +192,7 @@ cards:
           - condition: screen
             media_query: "(orientation: portrait) and (max-width: 600px)"
         actions:
-          - { label: Use Home (Handheld), icon: mdi:cellphone, action: navigate, navigation_path: /ted-dashboard/home-handheld, variant: primary }
+          - { label: Use Home (Handheld), icon: mdi:cellphone, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-handheld", navigation_path: /ted-dashboard/home-handheld, variant: primary }
           - { label: Not now, action: dismiss-session }
           - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
@@ -206,7 +206,7 @@ cards:
           - condition: screen
             media_query: "(orientation: landscape) and (min-height: 601px)"
         actions:
-          - { label: Use Home (Wall Panel), icon: mdi:monitor, action: navigate, navigation_path: /ted-dashboard/home-wallpanel-h, variant: primary }
+          - { label: Use Home (Wall Panel), icon: mdi:monitor, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-h", navigation_path: /ted-dashboard/home-wallpanel-h, variant: primary }
           - { label: Not now, action: dismiss-session }
           - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
@@ -220,7 +220,7 @@ cards:
           - condition: screen
             media_query: "(orientation: portrait) and (min-width: 601px)"
         actions:
-          - { label: Use Home (Wall Panel Portrait), icon: mdi:tablet, action: navigate, navigation_path: /ted-dashboard/home-wallpanel-v, variant: primary }
+          - { label: Use Home (Wall Panel Portrait), icon: mdi:tablet, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-v", navigation_path: /ted-dashboard/home-wallpanel-v, variant: primary }
           - { label: Not now, action: dismiss-session }
           - { label: Never show again, action: dismiss }
       - type: custom:ted-messagebox-card
@@ -234,7 +234,7 @@ cards:
           - condition: screen
             media_query: "(orientation: landscape) and (max-height: 600px)"
         actions:
-          - { label: Use Home (Nightstand), icon: mdi:bed-clock, action: navigate, navigation_path: /ted-dashboard/home-nightstand, variant: primary }
+          - { label: Use Home (Nightstand), icon: mdi:bed-clock, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-nightstand", navigation_path: /ted-dashboard/home-nightstand, variant: primary }
           - { label: Not now, action: dismiss-session }
           - { label: Never show again, action: dismiss }
   - !include navbar.yaml
