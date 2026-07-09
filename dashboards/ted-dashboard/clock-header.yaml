@@ -15,6 +15,13 @@ view_layout:
   grid-area: clock
 card_mod:
   style: |
+    /* The clock fills its grid cell, so give it a definite height (its usual ~25%
+       band, floored at 100px). This lets consuming views size the "clock" row with
+       `auto` — the card drives the row height when present, and the row collapses to
+       0 when a view omits the clock, so `content` can take the full height. */
+    :host {
+      height: max(100px, calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25)) !important;
+    }
     .cwc {
       padding: 8px !important;
     }

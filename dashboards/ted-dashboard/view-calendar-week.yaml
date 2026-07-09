@@ -15,8 +15,8 @@ layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
   grid-template-rows: >-
-    minmax(100px, calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25))
-    calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.75)
+    minmax(0, auto)
+    minmax(0, 1fr)
   grid-template-areas: |
     "clock"
     "calendar"
