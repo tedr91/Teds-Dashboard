@@ -17,19 +17,41 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - type: custom:ted-clock-weather-card
-    theme: ha
-    clock_size: extra_large
-    clock_offset: 50
-    date_offset: 50
-    weather_size: custom
-    weather_size_custom: 75
-    weather_entity: weather.forecast_home
+  - type: vertical-stack
     view_layout:
       grid-area: clock
     card_mod:
       style: |
-        .cwc {
-          padding: 8px !important;
+        :host { height: 100%; }
+        /* Fill the full-height clock area; the weather card stays in normal flow
+           at the TOP, while the clock+date card is absolutely centered on the
+           whole area (= vertically centered on screen). */
+        #root {
+          height: 100%;
+          position: relative;
         }
+        #root > *:nth-child(2) {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          transform: translateY(-50%);
+        }
+    cards:
+      - type: custom:ted-clock-weather-card
+        weather_entity: weather.forecast_home
+        show_date: false
+        show_clock: false
+        card_mod:
+          style: |
+            .cwc { padding: 8px !important; }
+      - type: custom:ted-clock-weather-card
+        clock_offset: 50
+        time_format: custom
+        time_format_custom: h:MM
+        date_offset: 50
+        show_weather: false
+        card_mod:
+          style: |
+            .cwc { padding: 8px !important; }
   - !include navbar-autohide.yaml
