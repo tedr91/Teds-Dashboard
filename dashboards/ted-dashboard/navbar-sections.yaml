@@ -7,8 +7,10 @@
     - type: datetime
       display: date
       date_format: ddd, MMMM D
+      tap_navigate: calendar_dashboard
     - type: weather
       entity: weather.forecast_home
+      tap_navigate: weather_dashboard
 - placement: left
   align: left
   items:
@@ -66,20 +68,10 @@
       icon_color: none
       transparency: 25
       tap_action:
-        action: navigate
-        navigation_path: /ted-dashboard
+        action: navigate-dashboard
+        dashboard: home_dashboard
       name: Home-Tablet
       icon: streamline-freehand-color:home-chimney-2
-      background: light-grey
-    - type: custom:ted-button-card
-      icon_scale: 130
-      icon_color: none
-      transparency: 25
-      tap_action:
-        action: navigate
-        navigation_path: /ted-dashboard/calendar-month
-      name: Calendar-Full
-      icon: streamline-freehand-color:calendar-grid
       background: light-grey
     - type: custom:ted-button-card
       icon: streamline-freehand-color:calendar-date
@@ -101,29 +93,6 @@
       name: MediaRoom-Wallpanel
       icon: streamline-freehand-color:movies-clapboard
       background: light-grey
-    - type: custom:ted-button-card
-      icon: streamline-freehand-color:alert-alarm-clock
-      icon_scale: 125
-      icon_color: none
-      transparency: 25
-      tap_action:
-        action: navigate
-        navigation_path: /ted-dashboard/alarms-timers
-      name: Alarms
-      entity: sensor.teds_alarms
-      badge:
-        entity: sensor.teds_alarms
-        count_attribute: alarms
-        area_scoped: true
-      highlight:
-        entity: sensor.teds_alarms
-        count_attribute: alarms
-        area_scoped: true
-        rules:
-          - operator: ">"
-            value: 0
-            icon_color: accent
-      background: light-grey
 - placement: right
   align: right
   items: []
@@ -134,4 +103,5 @@
     - type: alarms
     - type: datetime
       display: time
+      tap_navigate: alarms_dashboard
     - type: notifications
