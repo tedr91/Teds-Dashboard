@@ -47,6 +47,7 @@ cards:
             .cwc { padding: 8px !important; }
       - type: custom:ted-clock-weather-card
         clock_offset: 50
+        clock_size: extra_large
         time_format: custom
         time_format_custom: h:MM
         date_offset: 50

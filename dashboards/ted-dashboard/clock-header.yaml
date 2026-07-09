@@ -11,17 +11,18 @@ weather_size: custom
 weather_size_custom: 95
 date_size: custom
 date_size_custom: 95
+# `hug_content` sizes the card to the clock's real (width-driven) height, and
+# `max_height` caps it at 25% of the view — so the `auto` "clock" row shrinks with
+# the clock (shorter on a narrow handheld) but NEVER grows past 25% (the clock
+# scales down to fit when it would). The row still collapses to 0 when a view
+# omits the clock, letting `content` take the full height.
+hug_content: true
+max_height: >-
+  calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25)
 view_layout:
   grid-area: clock
 card_mod:
   style: |
-    /* The clock fills its grid cell, so give it a definite height (its usual ~25%
-       band, floored at 100px). This lets consuming views size the "clock" row with
-       `auto` — the card drives the row height when present, and the row collapses to
-       0 when a view omits the clock, so `content` can take the full height. */
-    :host {
-      height: max(100px, calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.25)) !important;
-    }
     .cwc {
       padding: 8px !important;
     }
