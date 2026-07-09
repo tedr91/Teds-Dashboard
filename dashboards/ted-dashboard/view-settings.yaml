@@ -51,6 +51,10 @@ cards:
           - label: Media
             icon: mdi:play-circle-outline
             card: { type: custom:ted-settings-card, sections: [Media], scope: shared, show_header: false }
+          - label: Cameras
+            icon: mdi:cctv
+            slug: cameras
+            card: { type: custom:ted-settings-card, sections: [Cameras], scope: shared, show_header: false }
           - label: Navbar
             icon: mdi:dock-bottom
             card: { type: custom:ted-settings-card, sections: [Navbar], scope: shared, show_header: false }

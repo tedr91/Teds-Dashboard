@@ -4,4 +4,5 @@ user_settings:
   - users:
       - wallpanel
       - nightstand
+      - handheld
     kiosk: true

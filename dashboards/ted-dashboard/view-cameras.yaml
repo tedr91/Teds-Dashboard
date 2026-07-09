@@ -1,6 +1,8 @@
-# View: Cameras — placeholder (custom:grid-layout). path: cameras
-# Uses the Welcome view's clock + content layout. The content area holds a
-# MessageBox card as the placeholder. Navbar is a plain card (position:fixed).
+# View: Cameras — Ted's Camera Card driven by the per-device Settings list. path: cameras
+# The camera card fills the "content" grid-area (like the calendar in Calendar-Month).
+# Cameras are chosen per-device in Settings → Cameras; when a device has none available
+# the card shows its own empty-state prompt with a "Settings" button. Navbar is a plain
+# card (`- !include navbar.yaml`), position:fixed so it needs no grid-area.
 type: custom:grid-layout
 path: cameras
 title: Cameras
@@ -18,12 +20,11 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - !include clock-header.yaml
-  - type: custom:ted-messagebox-card
+  - type: custom:ted-camera-card
     view_layout:
       grid-area: content
-    severity: info
-    icon: streamline-ultimate-color:shield-monitor
-    title: Cameras
-    message: This is a placeholder view. Content coming soon.
+    cameras_source: settings
+    layout: auto
+    fill: true
+    show_name: true
   - !include navbar.yaml
