@@ -18,6 +18,13 @@ layout:
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
+card_mod:
+  style: |
+    /* DEBUG: gated by the "Debug mode" setting (--ted-debug); outlines each
+       grid-area card. Toggle in Settings -> General. */
+    #root > * {
+      outline: 2px var(--ted-debug, none) red !important;
+    }
 cards:
   - type: custom:ted-tab-card
     view_layout:
