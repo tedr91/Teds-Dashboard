@@ -64,4 +64,8 @@ cards:
             icon: mdi:cctv
             slug: cameras
             card: { type: custom:ted-settings-card, sections: [Cameras], scope: shared, show_header: false }
+          - label: Temperatures
+            icon: mdi:thermometer
+            slug: temperatures
+            card: { type: custom:ted-settings-card, sections: [Temperatures], scope: shared, show_header: false }
   - !include ../shared/navbar.yaml
