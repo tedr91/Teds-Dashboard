@@ -122,8 +122,6 @@ cards:
         calendar_badge_icons:
           calendar.holidays_in_united_states: mdi:beach
           calendar.birthdays_2: mdi:balloon
-    view_layout:
-      grid-area: calendar
     card_mod:
       style: >
         .calendar-container {
