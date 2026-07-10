@@ -24,7 +24,6 @@ cards:
     view_layout:
       grid-area: content
     cameras_source: settings
-    layout: auto
     fill: true
     show_name: true
   - !include navbar.yaml
