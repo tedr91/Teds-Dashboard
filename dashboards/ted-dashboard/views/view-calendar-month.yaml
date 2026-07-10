@@ -11,14 +11,14 @@ layout:
   grid-template-columns: 1fr
   grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
-    "calendar"
+    "content"
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
 cards:
   - type: vertical-stack
     view_layout:
-      grid-area: calendar
+      grid-area: content
     cards:
       - title: Family Calendar
         entities:

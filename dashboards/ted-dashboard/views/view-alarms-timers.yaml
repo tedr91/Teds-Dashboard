@@ -14,14 +14,14 @@ layout:
   grid-template-columns: 1fr
   grid-template-rows: minmax(0, 1fr)
   grid-template-areas: |
-    "tabs"
+    "content"
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
 cards:
   - type: custom:ted-tab-card
     view_layout:
-      grid-area: tabs
+      grid-area: content
     scale: 125
     default_tab: 0
     url_param: tab
