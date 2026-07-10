@@ -45,7 +45,7 @@ cards:
         #root > * { outline: 2px var(--ted-debug, none) red !important; }
     cards:
       - type: custom:ted-clock-weather-card
-        weather_entity: weather.forecast_home
+        backend_integration: true
         show_date: false
         show_clock: false
         card_mod:
