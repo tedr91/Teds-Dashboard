@@ -3,6 +3,7 @@
 # (e.g. the nightstand view). Shares navbar-sections.yaml with the normal bar.
 type: custom:ted-navbar-card
 theme: ted-style
+backend_integration: true
 transparency: 50
 blur: 50
 auto_hide: true

@@ -1,31 +1,24 @@
-# View: Calendar-WeekView (custom:grid-layout) — path: calendar-week
-# Navbar is a plain card in `cards:` (`- !include navbar.yaml`); it's position:fixed so it
-# needs no grid-area.
-#
-# Effective view height = viewport - navbar - header, where the "header" term is
-#   var(--kiosk-header-height, var(--header-height, 56px))
-# kiosk-mode sets --kiosk-header-height:0 on #view (so kiosk = viewport - navbar),
-# while non-kiosk falls back to the real --header-height (so = viewport - navbar - header).
-# Clock: min 100px, max 25% of that height. Calendar: 75% of that height.
+# View: Calendar Month (custom:grid-layout) — path: calendar-month
+# Full-height month calendar in a single "calendar" grid-area. The daylight card
+# is wrapped in a vertical-stack so its card_mod survives its re-renders. Navbar is
+# a plain card (`- !include ../shared/navbar.yaml`); it's position:fixed so it needs no grid-area.
 type: custom:grid-layout
-path: calendar-week
-title: Calendar-WeekView
-icon: streamline-ultimate-color:calendar-date
+path: calendar-month
+title: Calendar
+icon: streamline-ultimate-color:calendar-1
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
-  grid-template-rows: >-
-    minmax(0, auto)
-    minmax(0, 1fr)
+  grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
-    "clock"
     "calendar"
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
 cards:
-  - !include clock-header.yaml
   - type: vertical-stack
+    view_layout:
+      grid-area: calendar
     cards:
       - title: Family Calendar
         entities:
@@ -36,7 +29,7 @@ cards:
           - calendar.ted_outlook_calendar
           - calendar.hockey_canadian_bacon
           - calendar.hockey_maple_bars
-        default_view: week
+        default_view: month
         first_day_of_week: 0
         week_days:
           - 0
@@ -74,10 +67,10 @@ cards:
         event_tint_opacity: 80
         event_color_bar_width: 6
         day_badges: []
-        hide_calendars: true
-        hide_header: true
+        hide_calendars: false
+        hide_header: false
         hide_year: false
-        hide_controls: true
+        hide_controls: false
         hide_navigation_buttons: false
         hide_add_event_button: false
         hide_view_selector: false
@@ -94,7 +87,7 @@ cards:
         enable_event_management: true
         event_modal_size: medium
         type: custom:daylight-calendar-card
-        rolling_days_week_compact: 5
+        rolling_days_week_compact: 6
         rolling_days_schedule: 6
         rolling_days_agenda: 4
         compact_height: true
@@ -137,21 +130,37 @@ cards:
         calendar_badge_icons:
           calendar.holidays_in_united_states: mdi:beach
           calendar.birthdays_2: mdi:balloon
-    view_layout:
-      grid-area: calendar
-    card_mod:
-      style: >
-        .calendar-container {
-          height: calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.75 - 36px) !important;
-          max-height: calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px)) * 0.75 - 36px) !important;
-          min-height: 0 !important;
-          overflow: hidden !important;
-        }
+        card_mod:
+          style: >
+            .calendar-container {
+              height: calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))) !important;
+              max-height: calc((100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))) !important;
+              min-height: 0 !important;
+              overflow: hidden !important;
+            }
 
-        .week-standard-container, .agenda-container, .calendar-grid,
-        .week-compact-container {
-          height: 100% !important;
-          max-height: 100% !important;
-          overflow-y: auto !important;
+            .calendar-grid, .agenda-container, .week-standard-container,
+            .week-compact-container {
+              height: 100% !important;
+              max-height: 100% !important;
+              overflow-y: auto !important;
+            }
+    card_mod:
+      style: |
+        :host {
+          display: block;
+          overflow: hidden;
         }
-  - !include navbar.yaml
+        #root {
+          height: 100%;
+          overflow: hidden;
+          gap: 0 !important;
+        }
+        #root > * {
+          margin: 0 !important;
+        }
+        #root > :first-child {
+          height: 100%;
+          overflow: hidden;
+        }
+  - !include ../shared/navbar.yaml

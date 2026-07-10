@@ -1,6 +1,6 @@
 # Shared clock/weather header — the SINGLE source for the "clock" grid area
 # across every standard view. Each view pulls it with:
-#   - !include clock-header.yaml   (relative to this directory)
+#   - !include ../shared/clock-header.yaml   (views live one level down)
 # It positions itself into the view's `clock` grid area, so any consuming view
 # must define a `clock` row in its `grid-template-areas`.
 # (home-nightstand keeps its own bespoke split layout and does NOT use this.)

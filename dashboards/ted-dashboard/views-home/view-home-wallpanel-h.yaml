@@ -18,7 +18,7 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - !include clock-header.yaml
+  - !include ../shared/clock-header.yaml
   - type: vertical-stack
     cards:
       - title: Family Calendar
@@ -148,4 +148,4 @@ cards:
           max-height: 100% !important;
           overflow-y: auto !important;
         }
-  - !include navbar.yaml
+  - !include ../shared/navbar.yaml

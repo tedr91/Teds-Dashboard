@@ -1,9 +1,10 @@
 # Shared Ted's Navbar - the SINGLE source for the bar across every view.
-# Each view pulls it with: - !include navbar.yaml  (relative to this directory).
+# Each view pulls it with: - !include ../shared/navbar.yaml  (views live one level down).
 # The bar is position:fixed, so each view's copy reads as one continuous navbar.
 # Contents live in navbar-sections.yaml (shared with the auto-hide variant).
 type: custom:ted-navbar-card
 theme: ted-style
+backend_integration: true
 transparency: 50
 blur: 50
 menu_items: !include navbar-menu-items.yaml

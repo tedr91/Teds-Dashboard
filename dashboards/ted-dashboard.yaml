@@ -8,23 +8,26 @@
 #         filename: dashboards/ted-dashboard.yaml
 #
 # !include paths below are relative to THIS file's directory (dashboards/), so the
-# partials live under dashboards/ted-dashboard/.
-kiosk_mode: !include ted-dashboard/kiosk.yaml
+# partials live under dashboards/ted-dashboard/, organized into:
+#   shared/      — reused partials (kiosk, navbar, clock-header)
+#   views-home/  — the per-device "home" views
+#   views/       — all the other views
+kiosk_mode: !include ted-dashboard/shared/kiosk.yaml
 views:
-  - !include ted-dashboard/view-welcome.yaml
-  - !include ted-dashboard/view-home-nightstand.yaml
-  - !include ted-dashboard/view-home-wallpanel-h.yaml
-  - !include ted-dashboard/view-home-wallpanel-v.yaml
-  - !include ted-dashboard/view-home-handheld.yaml
-  - !include ted-dashboard/view-cameras.yaml
-  - !include ted-dashboard/view-info.yaml
-  - !include ted-dashboard/view-climate.yaml
-  - !include ted-dashboard/view-weather.yaml
-  - !include ted-dashboard/view-music.yaml
-  - !include ted-dashboard/view-announce.yaml
-  - !include ted-dashboard/view-photos.yaml
-  - !include ted-dashboard/view-calendar-month.yaml
-  - !include ted-dashboard/view-calendar-week.yaml
-  - !include ted-dashboard/view-mediaroom.yaml
-  - !include ted-dashboard/view-alarms-timers.yaml
-  - !include ted-dashboard/view-settings.yaml
+  - !include ted-dashboard/views/view-welcome.yaml
+  - !include ted-dashboard/views-home/view-home-nightstand.yaml
+  - !include ted-dashboard/views-home/view-home-wallpanel-h.yaml
+  - !include ted-dashboard/views-home/view-home-wallpanel-v.yaml
+  - !include ted-dashboard/views-home/view-home-handheld.yaml
+  - !include ted-dashboard/views/view-cameras.yaml
+  - !include ted-dashboard/views/view-info.yaml
+  - !include ted-dashboard/views/view-climate.yaml
+  - !include ted-dashboard/views/view-weather.yaml
+  - !include ted-dashboard/views/view-music.yaml
+  - !include ted-dashboard/views/view-announce.yaml
+  - !include ted-dashboard/views/view-photos.yaml
+  - !include ted-dashboard/views/view-calendar-month.yaml
+  - !include ted-dashboard/views/view-calendar-week.yaml
+  - !include ted-dashboard/views/view-mediaroom.yaml
+  - !include ted-dashboard/views/view-alarms-timers.yaml
+  - !include ted-dashboard/views/view-settings.yaml

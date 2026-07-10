@@ -58,7 +58,7 @@ cards:
       - type: custom:ted-clock-weather-card
         clock_offset: 50
         clock_size: custom
-        clock_size_custom: 150
+        clock_size_custom: 140
         time_format: custom
         time_format_custom: h:MM
         date_offset: 50
@@ -70,4 +70,4 @@ cards:
             :host { outline: 3px var(--ted-debug, none) orange !important; }
             ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
             .cwc { outline: 1px var(--ted-debug, none) lime !important; }
-  - !include navbar-autohide.yaml
+  - !include ../shared/navbar-autohide.yaml

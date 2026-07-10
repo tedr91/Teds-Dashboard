@@ -1,5 +1,5 @@
 # kiosk_mode body (consumed by the kiosk-mode HACS plugin via the dashboard config).
-# Included by ted-dashboard.yaml as: kiosk_mode: !include ted-dashboard/kiosk.yaml
+# Included by ted-dashboard.yaml as: kiosk_mode: !include ted-dashboard/shared/kiosk.yaml
 user_settings:
   - users:
       - wallpanel

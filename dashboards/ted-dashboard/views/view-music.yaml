@@ -1,10 +1,10 @@
-# View: Info — placeholder (custom:grid-layout). path: info
+# View: Music — placeholder (custom:grid-layout). path: music
 # Uses the Welcome view's clock + content layout. The content area holds a
 # MessageBox card as the placeholder. Navbar is a plain card (position:fixed).
 type: custom:grid-layout
-path: info
-title: Info
-icon: streamline-ultimate-color:information-circle
+path: music
+title: Music
+icon: streamline-ultimate-color:music-note-1
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
@@ -18,12 +18,12 @@ layout:
   padding: 12px
   box-sizing: border-box
 cards:
-  - !include clock-header.yaml
+  - !include ../shared/clock-header.yaml
   - type: custom:ted-messagebox-card
     view_layout:
       grid-area: content
     severity: info
-    icon: streamline-ultimate-color:information-circle
-    title: Info
+    icon: streamline-ultimate-color:music-note-1
+    title: Music
     message: This is a placeholder view. Content coming soon.
-  - !include navbar.yaml
+  - !include ../shared/navbar.yaml

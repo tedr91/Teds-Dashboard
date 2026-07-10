@@ -2,7 +2,7 @@
 # A shared Global / This-device scope toggle sits above a Ted Tab Card whose tabs
 # are the logical settings sections (each a Ted's Cards Settings card filtered to
 # one group, following the shared scope). Requires the Ted's Cards Backend.
-# Navbar is a plain card (`- !include navbar.yaml`); position:fixed, no grid-area.
+# Navbar is a plain card (`- !include ../shared/navbar.yaml`); position:fixed, no grid-area.
 type: custom:grid-layout
 path: settings
 title: Settings
@@ -64,4 +64,4 @@ cards:
             icon: mdi:cctv
             slug: cameras
             card: { type: custom:ted-settings-card, sections: [Cameras], scope: shared, show_header: false }
-  - !include navbar.yaml
+  - !include ../shared/navbar.yaml

@@ -3,7 +3,7 @@
 # starts with a centered "Add" button (custom:ted-button-card, horizontal orientation) that
 # fires an `ll-custom` DOM event (action: fire-dom-event); the alarm/timer card in the same
 # tab listens for it to open its add dialog. Deep-link a tab with `?tab=alarms` / `?tab=timers`.
-# Navbar is a plain card in `cards:` (`- !include navbar.yaml`); it's position:fixed so
+# Navbar is a plain card in `cards:` (`- !include ../shared/navbar.yaml`); it's position:fixed so
 # it needs no grid-area.
 type: custom:grid-layout
 path: alarms-timers
@@ -103,4 +103,4 @@ cards:
               show_add: false
               show_header_icon: false
               show_header_name: false
-  - !include navbar.yaml
+  - !include ../shared/navbar.yaml

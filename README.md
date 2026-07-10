@@ -56,10 +56,16 @@ refresh (no restart).
 ## `!include` layout
 
 `!include` paths resolve relative to the **directory of the file containing the directive**.
-`ted-dashboard.yaml` includes the partials from `ted-dashboard/`, and each view pulls the
-shared navbar with `!include navbar.yaml`. Because YAML anchors cannot cross files,
-`navbar.yaml` is the single source for the bar; each view includes its own copy (the bar is
-`position: fixed`, so it reads as one continuous navbar across views).
+`ted-dashboard.yaml` includes the partials from `ted-dashboard/`, which is organized into:
+
+- `shared/` — reused partials: `kiosk.yaml`, `navbar.yaml`, `navbar-autohide.yaml`,
+  `navbar-sections.yaml`, `navbar-menu-items.yaml`, and `clock-header.yaml`.
+- `views-home/` — the per-device "home" views (`view-home-*.yaml`).
+- `views/` — every other view (welcome, cameras, climate, settings, …).
+
+Each view pulls the shared navbar with `!include ../shared/navbar.yaml`. Because YAML anchors
+cannot cross files, `navbar.yaml` is the single source for the bar; each view includes its own
+copy (the bar is `position: fixed`, so it reads as one continuous navbar across views).
 
 ## Deploy loop
 
