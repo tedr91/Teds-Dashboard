@@ -1,20 +1,18 @@
 # View: Home (Nightstand) — placeholder (custom:grid-layout). path: home-nightstand
-# Content (left) + clock (right) side-by-side. Clock is at least 60% wide; the
+# Clock (left) + content (right) side-by-side. Clock is at least 60% wide; the
 # content column uses fit-content(40%) so it caps at 40% when it holds a card but
-# COLLAPSES TO 0 when empty (letting the clock span the full width). Content sits on
-# the LEFT so the clock area reaches the screen's RIGHT edge — the top-right weather
-# then gets uniform top/right padding (with content on the right, the grid-gap added
-# an extra ~12px only on the right). The navbar auto-hides on this view.
+# COLLAPSES TO 0 when empty (letting the clock span the full width). The navbar
+# auto-hides on this view.
 type: custom:grid-layout
 path: home-nightstand
 title: Home (Nightstand)
 icon: cbi:echo-show-5-gen-2
 layout:
   height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: fit-content(40%) minmax(60%, 1fr)
+  grid-template-columns: minmax(60%, 1fr) fit-content(40%)
   grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
-    "content clock"
+    "clock content"
   grid-gap: 12px
   padding: 12px
   box-sizing: border-box
@@ -25,19 +23,12 @@ cards:
     card_mod:
       style: |
         :host { height: 100%; }
-        /* Both cards are absolutely positioned over the full-height clock area (they
-           may overlap — that's fine). The weather is pinned to the TOP (content
-           height); its content is right-offset, so it lands in the top-right corner
-           of the screen. The clock+date card is centered vertically. */
+        /* Fill the full-height clock area; the weather card stays in normal flow
+           at the TOP, while the clock+date card is absolutely centered on the
+           whole area (= vertically centered on screen). */
         #root {
           height: 100%;
           position: relative;
-        }
-        #root > *:nth-child(1) {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
         }
         #root > *:nth-child(2) {
           position: absolute;
@@ -57,7 +48,6 @@ cards:
         weather_entity: weather.forecast_home
         show_date: false
         show_clock: false
-        hug_content: true
         card_mod:
           style: |
             .cwc { padding: 8px !important; }
