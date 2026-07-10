@@ -5,6 +5,8 @@
 # must define a `clock` row in its `grid-template-areas`.
 # (home-nightstand keeps its own bespoke split layout and does NOT use this.)
 type: custom:ted-clock-weather-card
+clock_size: custom
+clock_size_custom: 95
 weather_size: custom
 weather_size_custom: 95
 date_size: custom
