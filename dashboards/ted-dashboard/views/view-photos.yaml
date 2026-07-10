@@ -5,18 +5,7 @@ type: custom:grid-layout
 path: photos
 title: Photos
 icon: streamline-ultimate-color:picture-stack-landscape
-layout:
-  height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: 1fr
-  grid-template-rows: >-
-    minmax(0, auto)
-    minmax(0, 1fr)
-  grid-template-areas: |
-    "clock"
-    "content"
-  grid-gap: 12px
-  padding: 12px
-  box-sizing: border-box
+layout: !include ../shared/layout-clock-content.yaml
 cards:
   - !include ../shared/clock-header.yaml
   - type: custom:ted-messagebox-card

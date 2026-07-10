@@ -9,15 +9,7 @@ type: custom:grid-layout
 path: alarms-timers
 title: Alarms-Timers
 icon: streamline-ultimate-color:time-clock-circle
-layout:
-  height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: 1fr
-  grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-areas: |
-    "content"
-  grid-gap: 12px
-  padding: 12px
-  box-sizing: border-box
+layout: !include ../shared/layout-content.yaml
 cards:
   - type: custom:ted-tab-card
     view_layout:

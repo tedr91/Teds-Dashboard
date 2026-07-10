@@ -6,15 +6,7 @@ type: custom:grid-layout
 path: calendar-month
 title: Calendar
 icon: streamline-ultimate-color:calendar-1
-layout:
-  height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: 1fr
-  grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-areas: |
-    "content"
-  grid-gap: 12px
-  padding: 12px
-  box-sizing: border-box
+layout: !include ../shared/layout-content.yaml
 cards:
   - type: vertical-stack
     view_layout:
