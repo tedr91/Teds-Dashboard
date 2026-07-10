@@ -11,9 +11,9 @@ path: weather
 title: Weather
 icon: streamline-ultimate-color:rain-umbrella-sun
 layout:
-  height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px))
+  height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-columns: 1fr
-  grid-template-rows: minmax(0, 1fr)
+  grid-template-rows: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
   grid-template-areas: |
     "content"
   grid-gap: 12px
