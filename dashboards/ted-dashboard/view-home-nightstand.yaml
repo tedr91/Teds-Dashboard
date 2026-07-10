@@ -52,6 +52,7 @@ cards:
           style: |
             .cwc { padding: 8px !important; }
             /* DEBUG (gated by the "Debug mode" setting via --ted-debug) */
+            :host { outline: 3px var(--ted-debug, none) orange !important; }
             ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
             .cwc { outline: 1px var(--ted-debug, none) lime !important; }
       - type: custom:ted-clock-weather-card
@@ -65,6 +66,7 @@ cards:
           style: |
             .cwc { padding: 8px !important; }
             /* DEBUG (gated by the "Debug mode" setting via --ted-debug) */
+            :host { outline: 3px var(--ted-debug, none) orange !important; }
             ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
             .cwc { outline: 1px var(--ted-debug, none) lime !important; }
   - !include navbar-autohide.yaml
