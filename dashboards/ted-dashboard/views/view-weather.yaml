@@ -10,7 +10,7 @@ type: custom:grid-layout
 path: weather
 title: Weather
 icon: streamline-ultimate-color:rain-umbrella-sun
-layout: !include ../shared/layout-clock-content.yaml
+layout: !include ../shared/layout-content.yaml
 cards:
   - type: custom:ted-tab-card
     view_layout:
@@ -29,6 +29,14 @@ cards:
           card_mod:
             style: |
               :host { height: 100%; }
+              /* Opaque, theme-adaptive grey surface so the forecast reads well over the
+                 translucent dashboard in both light and dark mode (nudged toward grey). */
+              ha-card {
+                height: 100%;
+                background: color-mix(in srgb, var(--card-background-color, #fff) 88%, gray) !important;
+                -webkit-backdrop-filter: none !important;
+                backdrop-filter: none !important;
+              }
       - label: Radar
         icon: mdi:radar
         slug: radar

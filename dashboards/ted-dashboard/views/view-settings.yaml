@@ -7,7 +7,7 @@ type: custom:grid-layout
 path: settings
 title: Settings
 icon: streamline-ultimate-color:cog
-layout: !include ../shared/layout-clock-content.yaml
+layout: !include ../shared/layout-content.yaml
 cards:
   - type: custom:ted-settings-card
     view_layout:

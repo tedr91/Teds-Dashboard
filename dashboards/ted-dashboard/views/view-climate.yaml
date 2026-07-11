@@ -9,9 +9,8 @@ type: custom:grid-layout
 path: climate
 title: Climate
 icon: streamline-ultimate-color:temperature-thermometer-high
-layout: !include ../shared/layout-clock-content.yaml
+layout: !include ../shared/layout-content.yaml
 cards:
-  - !include ../shared/clock-header.yaml
   - type: custom:ted-climate-card
     view_layout:
       grid-area: content
