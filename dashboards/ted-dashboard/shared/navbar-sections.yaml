@@ -22,10 +22,10 @@
         action: navigate-dashboard
         dashboard: home_dashboard
       name: Home-Tablet
-      icon: streamline-freehand-color:home-chimney-2
+      icon: streamline-ultimate-color:house-chimney
       background: light-grey
     - type: custom:ted-button-card
-      icon: streamline-freehand-color:calendar-date
+      icon: streamline-ultimate-color:calendar-date
       icon_scale: 140
       icon_color: none
       transparency: 40
@@ -112,7 +112,7 @@
         action: navigate
         navigation_path: /ted-dashboard/mediaroom-wallpanel
       name: MediaRoom-Wallpanel
-      icon: streamline-freehand-color:movies-clapboard
+      icon: streamline-ultimate-color:modern-tv-remote
       background: light-grey
 - placement: right
   align: right
