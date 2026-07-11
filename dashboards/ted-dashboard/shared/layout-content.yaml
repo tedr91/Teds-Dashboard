@@ -4,7 +4,7 @@
 #   layout: !include ../shared/layout-content.yaml
 # The consuming card targets `grid-area: content`.
 height: calc(100dvh - var(--kiosk-header-height, var(--header-height, 56px)) - var(--safe-area-inset-top, 0px) - var(--ted-navbar-bottom-reserve, 48px))
-grid-template-columns: 1fr
+grid-template-columns: minmax(0, 1fr)
 grid-template-rows: minmax(0, 1fr)
 grid-template-areas: |
   "content"
