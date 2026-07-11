@@ -7,19 +7,11 @@ type: custom:grid-layout
 path: settings
 title: Settings
 icon: streamline-ultimate-color:cog
-layout:
-  height: calc(100dvh - var(--ted-navbar-bottom-reserve, 48px))
-  grid-template-columns: 1fr
-  grid-template-rows: minmax(0, 1fr)
-  grid-template-areas: |
-    "main"
-  grid-gap: 12px
-  padding: 12px
-  box-sizing: border-box
+layout: !include ../shared/layout-clock-content.yaml
 cards:
   - type: custom:ted-settings-card
     view_layout:
-      grid-area: main
+      grid-area: content
     section_tabs: true
     title: Ted's Cards Settings
   - !include ../shared/navbar.yaml

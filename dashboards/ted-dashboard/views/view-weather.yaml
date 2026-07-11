@@ -10,7 +10,7 @@ type: custom:grid-layout
 path: weather
 title: Weather
 icon: streamline-ultimate-color:rain-umbrella-sun
-layout: !include ../shared/layout-content.yaml
+layout: !include ../shared/layout-clock-content.yaml
 cards:
   - type: custom:ted-tab-card
     view_layout:
