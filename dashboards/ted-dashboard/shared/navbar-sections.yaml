@@ -69,6 +69,36 @@
       icon_color: none
       transparency: 40
       tap_action:
+        action: navigate-dashboard
+        dashboard: music_dashboard
+      name: Music
+      icon: streamline-ultimate-color:music-note-1
+      background: light-grey
+    - type: custom:ted-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 40
+      tap_action:
+        action: navigate-dashboard
+        dashboard: photos_dashboard
+      name: Photos
+      icon: streamline-ultimate-color:picture-stack-landscape
+      background: light-grey
+    - type: custom:ted-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 40
+      tap_action:
+        action: navigate-dashboard
+        dashboard: announce_dashboard
+      name: Announce
+      icon: streamline-ultimate-color:megaphone
+      background: light-grey
+    - type: custom:ted-button-card
+      icon_scale: 140
+      icon_color: none
+      transparency: 40
+      tap_action:
         action: navigate
         navigation_path: /ted-dashboard/mediaroom-wallpanel
       name: MediaRoom-Wallpanel
