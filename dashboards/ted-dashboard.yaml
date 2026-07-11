@@ -27,6 +27,7 @@ views:
   - !include ted-dashboard/views/view-calendar-month.yaml
   - !include ted-dashboard/views/view-calendar-week.yaml
   - !include ted-dashboard/views/view-alarms-timers.yaml
+  - !include ted-dashboard/views/view-notifications.yaml
   - !include ted-dashboard/views/view-info.yaml
   - !include ted-dashboard/views/view-announce.yaml
   - !include ted-dashboard/views/view-settings.yaml
