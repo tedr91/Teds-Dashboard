@@ -5,13 +5,11 @@
 # 'sections: !include navbar-sections.yaml'.
 # 0 — Left Section
 - items:
-    - type: datetime
-      display: date
-      date_format: ddd, MMMM D
-      tap_navigate: calendar_dashboard
     - type: weather
       entity: weather.forecast_home
-      tap_navigate: weather_dashboard
+      tap_action:
+        action: navigate-dashboard
+        dashboard: weather_dashboard
 # 1 — Mid-Left Section (empty)
 - items: []
 # 2 — Center Section
@@ -123,6 +121,10 @@
     - type: timers
     - type: alarms
     - type: datetime
-      display: time
-      tap_navigate: alarms_dashboard
+      display: both-stacked
+      date_format: MM/DD/YYYY
+      time_format: h:MM A
+      tap_action:
+        action: navigate-dashboard
+        dashboard: calendar_dashboard
     - type: notifications
