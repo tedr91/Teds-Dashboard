@@ -127,4 +127,7 @@
       tap_action:
         action: navigate-dashboard
         dashboard: calendar_dashboard
+      hold_action:
+        action: navigate-dashboard
+        dashboard: alarms_timers_dashboard
     - type: notifications
