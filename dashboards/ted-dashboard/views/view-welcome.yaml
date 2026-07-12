@@ -217,3 +217,4 @@ cards:
           - { label: Use Home (Nightstand), icon: mdi:bed-clock, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-nightstand", navigation_path: /ted-dashboard/home-nightstand, variant: primary }
           - { label: Not now, action: dismiss-session }
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

@@ -15,3 +15,4 @@ cards:
     title: Photos
     message: This is a placeholder view. Content coming soon.
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

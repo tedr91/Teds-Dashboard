@@ -11,3 +11,4 @@ cards:
     view_layout:
       grid-area: content
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

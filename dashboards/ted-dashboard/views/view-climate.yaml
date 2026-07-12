@@ -18,3 +18,4 @@ cards:
     show_current_as_primary: true
     fill: true
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

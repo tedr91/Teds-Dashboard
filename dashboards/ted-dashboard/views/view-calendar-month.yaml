@@ -156,3 +156,4 @@ cards:
           overflow: hidden;
         }
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

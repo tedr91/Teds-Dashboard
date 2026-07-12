@@ -96,3 +96,4 @@ cards:
               show_header_icon: false
               show_header_name: false
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

@@ -127,3 +127,4 @@ cards:
       calendar.holidays_in_united_states: mdi:beach
       calendar.birthdays_2: mdi:balloon
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

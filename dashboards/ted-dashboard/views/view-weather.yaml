@@ -46,3 +46,4 @@ cards:
             style: |
               :host { height: 100%; }
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

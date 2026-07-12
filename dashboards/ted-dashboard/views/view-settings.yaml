@@ -15,3 +15,4 @@ cards:
     section_tabs: true
     title: Ted's Cards Settings
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

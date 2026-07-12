@@ -16,3 +16,4 @@ cards:
     fill: true
     show_name: true
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

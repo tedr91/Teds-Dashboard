@@ -16,3 +16,4 @@ cards:
     title: Home (Wall Panel — Portrait)
     message: This is a placeholder view. Content coming soon.
   - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

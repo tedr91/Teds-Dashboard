@@ -71,3 +71,4 @@ cards:
             ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
             .cwc { outline: 1px var(--ted-debug, none) lime !important; }
   - !include ../shared/navbar-autohide.yaml
+  - !include ../shared/background.yaml
