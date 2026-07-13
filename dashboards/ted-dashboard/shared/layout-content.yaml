@@ -11,3 +11,7 @@ grid-template-areas: |
 grid-gap: 12px
 padding: 12px
 box-sizing: border-box
+# grid-layout gives every card `margin: 4px 4px 8px` (= 12px vertical). A content card
+# that fills `height: 100%` of its cell then overflows the cell by that 12px. Zero it so
+# cards fit their cell exactly; the 12px grid padding provides the (consistent) insets.
+"--masonry-view-card-margin": "0px"
