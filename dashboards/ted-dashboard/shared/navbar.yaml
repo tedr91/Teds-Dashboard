@@ -5,6 +5,9 @@
 type: custom:ted-navbar-card
 theme: ted-style
 backend_integration: true
+# Our view layouts already reserve the bar's strip (they subtract
+# --ted-navbar-bottom-reserve from their height), so the bar must NOT reserve it again.
+reserve_content_space: false
 transparency: 50
 blur: 50
 menu_items: !include navbar-menu-items.yaml
