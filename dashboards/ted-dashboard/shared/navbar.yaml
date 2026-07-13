@@ -12,3 +12,10 @@ transparency: 50
 blur: 50
 menu_items: !include navbar-menu-items.yaml
 sections: !include navbar-sections.yaml
+# The bar is position:fixed, so its hui-card wrapper is only a placeholder. Without a
+# grid-area, custom:grid-layout auto-places it into an IMPLICIT row below the content,
+# adding a grid-gap (and a stray outline in Debug mode). Pin it to cell 1/1 at zero
+# size (place-self:start) so it takes no layout space and creates no extra row.
+view_layout:
+  grid-area: 1 / 1
+  place-self: start

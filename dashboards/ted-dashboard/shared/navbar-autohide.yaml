@@ -12,3 +12,8 @@ blur: 50
 auto_hide: true
 menu_items: !include navbar-menu-items.yaml
 sections: !include navbar-sections.yaml
+# See navbar.yaml: pin the fixed bar's placeholder to cell 1/1 at zero size so
+# grid-layout doesn't add an implicit row + gap below the content.
+view_layout:
+  grid-area: 1 / 1
+  place-self: start
