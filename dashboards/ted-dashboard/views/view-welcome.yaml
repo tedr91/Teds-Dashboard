@@ -69,7 +69,6 @@ cards:
             state: [unknown, unavailable]
       # HACS — shown first among the reported checks (everything else installs through it).
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: danger
         icon: mdi:storefront-outline
         title: HACS not detected
@@ -82,7 +81,6 @@ cards:
             attribute: hacs
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: warning
         icon: mdi:palette-outline
         title: Card-mod (or UIX) not installed
@@ -95,7 +93,6 @@ cards:
             attribute: card_mod
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: warning
         icon: mdi:emoticon-outline
         title: Custom Icons not installed
@@ -108,7 +105,6 @@ cards:
             attribute: custom_icons
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: warning
         icon: mdi:calendar-alert
         title: Daylight Calendar Card not installed
@@ -121,7 +117,6 @@ cards:
             attribute: daylight_calendar
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: warning
         icon: mdi:web
         title: browser_mod not installed
@@ -134,7 +129,6 @@ cards:
             attribute: browser_mod
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:monitor-shimmer
         title: Kiosk-Mode not installed
@@ -147,7 +141,6 @@ cards:
             attribute: kiosk_mode
             state: missing
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:weather-partly-cloudy
         title: No weather entity found
@@ -161,7 +154,6 @@ cards:
       # uses the small-landscape bucket as an interim match — to be folded into a
       # smarter auto-detection later.
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:cellphone
         title: A better layout for this screen
@@ -174,7 +166,6 @@ cards:
           - { label: Use Home (Handheld), icon: mdi:cellphone, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-handheld", navigation_path: /ted-dashboard/home-handheld, variant: primary }
           - { label: Not now, action: dismiss-session }
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:monitor
         title: A better layout for this screen
@@ -187,7 +178,6 @@ cards:
           - { label: Use Home (Wall Panel), icon: mdi:monitor, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-h", navigation_path: /ted-dashboard/home-wallpanel-h, variant: primary }
           - { label: Not now, action: dismiss-session }
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:tablet
         title: A better layout for this screen
@@ -200,7 +190,6 @@ cards:
           - { label: Use Home (Wall Panel Portrait), icon: mdi:tablet, action: set-setting, scope: device, setting: home_dashboard, value: "[root]/home-wallpanel-v", navigation_path: /ted-dashboard/home-wallpanel-v, variant: primary }
           - { label: Not now, action: dismiss-session }
       - type: custom:ted-messagebox-card
-        theme: ted-style
         severity: tip
         icon: mdi:bed-clock
         title: On a nightstand?
