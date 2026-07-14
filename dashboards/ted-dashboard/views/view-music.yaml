@@ -11,6 +11,7 @@ cards:
     view_layout:
       grid-area: content
     player_source: settings
+    fill: true
     mass_config:
       expressive: true
       default_section: music_player
