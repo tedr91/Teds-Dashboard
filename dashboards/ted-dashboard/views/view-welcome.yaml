@@ -35,7 +35,7 @@ cards:
       # without them, so a core markdown card carries the warning.
       - type: markdown
         content: |
-          ## 👋 {{ user }}, welcome to the Ted Dashboard system!
+          ## Welcome to the Ted Dashboard system!
 
           {% set lc = state_attr('sensor.teds_requirements','layout_card') %}
           {% set tc = state_attr('sensor.teds_requirements','ted_cards') %}
@@ -44,9 +44,6 @@ cards:
           {% endif %}
           {% if tc == 'missing' %}
           🟥 **Ted's Cards (frontend) isn't loaded** — install Ted's Cards via HACS and refresh.
-          {% endif %}
-          {% if states.sensor.teds_settings is not none %}
-          Here you can view your status — please address any issues flagged below. · [⚙️ Settings](/ted-dashboard/settings)
           {% endif %}
       # Device status at a glance — dependency/integration counts, this browser's
       # Browser Mod registration + id, backend connection/version, weather and the
