@@ -122,8 +122,8 @@
     - type: alarms
     - type: datetime
       display: both-stacked
-      date_format: MM/DD/YYYY
-      time_format: h:MM A
+      date_format: MMMM D
+      time_format: h:MM a
       tap_action:
         action: navigate-dashboard
         dashboard: calendar_dashboard
