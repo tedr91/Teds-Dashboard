@@ -51,7 +51,6 @@ cards:
       # only renders when Ted's Cards frontend is loaded, which the markdown
       # blocker above already covers when it isn't.
       - type: custom:ted-status-card
-        theme: ted-style
       # Backend integration — the funnel; shows only when it's absent (which is
       # also what unlocks every other check below).
       - type: custom:ted-messagebox-card
