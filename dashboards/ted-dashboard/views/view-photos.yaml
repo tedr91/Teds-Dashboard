@@ -10,6 +10,7 @@ cards:
   - type: custom:ted-messagebox-card
     view_layout:
       grid-area: content
+      place-self: center
     severity: info
     icon: streamline-ultimate-color:picture-stack-landscape
     title: Photos
