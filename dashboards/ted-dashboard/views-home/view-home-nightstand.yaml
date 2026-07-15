@@ -63,7 +63,7 @@ cards:
         time_format_custom: h:MM
         date_offset: 50
         date_size: custom
-        date_size_custom: 110
+        date_size_custom: 140
         show_weather: false
         card_mod:
           style: |
