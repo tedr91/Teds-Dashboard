@@ -1,4 +1,4 @@
-# View: Welcome (custom:grid-layout) — path: welcome
+# View: Home-Welcome (custom:grid-layout) — path: home-welcome
 # The dashboard's DEFAULT landing page (first view). Reuses the calendar-week
 # layout: the top "clock" section stays; the bottom "content" section is an
 # informational panel that guides setup (e.g. installing Ted's Cards Backend)
@@ -10,8 +10,8 @@
 # non-kiosk falls back to the real --header-height (viewport - navbar - header).
 # Clock: min 100px, 25% of that height. Content: 75% of that height.
 type: custom:grid-layout
-path: welcome
-title: Welcome
+path: home-welcome
+title: Home-Welcome
 icon: streamline-ultimate-color:house-chimney
 layout: !include ../shared/layout-clock-content.yaml
 cards:
