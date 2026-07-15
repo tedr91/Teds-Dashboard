@@ -129,5 +129,5 @@
         dashboard: calendar_dashboard
       hold_action:
         action: navigate-dashboard
-        dashboard: alarms_timers_dashboard
+        dashboard: alarms_dashboard
     - type: notifications
