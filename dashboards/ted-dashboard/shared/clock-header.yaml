@@ -5,7 +5,7 @@
 # must define a `clock` row in its `grid-template-areas`.
 # (home-nightstand keeps its own bespoke split layout and does NOT use this.)
 type: custom:ted-clock-weather-card
-# `ted-style` theme. Automatic Night Mode recolours the text via the overridable
+# `ted-style` theme. Automatic Night Mode recolors the text via the overridable
 # `--ted-night-text` token (Ted's Cards v1.0.236+), so the self-contained style works at night.
 theme: ted-style
 transparency: 100
