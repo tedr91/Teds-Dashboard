@@ -45,6 +45,8 @@ cards:
         #root > * { outline: 2px var(--ted-debug, none) red !important; }
     cards:
       - type: custom:ted-clock-weather-card
+        theme: ha
+        transparency: 100
         backend_integration: true
         show_date: false
         show_clock: false
@@ -56,6 +58,8 @@ cards:
             ha-card { outline: 2px var(--ted-debug, none) cyan !important; }
             .cwc { outline: 1px var(--ted-debug, none) lime !important; }
       - type: custom:ted-clock-weather-card
+        theme: ha
+        transparency: 100
         clock_offset: 50
         clock_size: custom
         clock_size_custom: 140
