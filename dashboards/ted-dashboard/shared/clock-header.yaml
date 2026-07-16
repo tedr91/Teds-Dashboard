@@ -5,12 +5,9 @@
 # must define a `clock` row in its `grid-template-areas`.
 # (home-nightstand keeps its own bespoke split layout and does NOT use this.)
 type: custom:ted-clock-weather-card
-# `ha` theme so the clock/weather/date text follows the HA theme's --primary-text-color —
-# which Automatic Night Mode overrides, so this text recolours at night (the self-contained
-# `ted-style` theme hard-codes white on the card's :host, which the night override can't reach).
-theme: ha
-# Keep the card surface fully transparent so the HA theme doesn't paint a card
-# background behind the clock/weather.
+# `ted-style` theme. Automatic Night Mode recolours the text via the overridable
+# `--ted-night-text` token (Ted's Cards v1.0.236+), so the self-contained style works at night.
+theme: ted-style
 transparency: 100
 # Source the weather entity from the global `weather_entity` setting (Settings →
 # General) rather than hardcoding it. Falls back to the first weather.* entity when
