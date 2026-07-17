@@ -24,5 +24,17 @@ cards:
       # artwork doesn't bleed through on our translucent themes.
       match_theme: true
       artwork_object_fit: cover
+      # YAMP's search/menu overlay container (.entity-options-container) only has
+      # max-height (no definite height) inside an align:flex-start overlay, so with the
+      # virtualized card-grid results it collapses to ~1 row (the browse area is cut
+      # short). Give it a real height so the flex chain + virtualizer fill the card.
+      card_mod:
+        style: |
+          .entity-options-overlay {
+            align-items: stretch !important;
+          }
+          .entity-options-container {
+            height: 96% !important;
+          }
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
