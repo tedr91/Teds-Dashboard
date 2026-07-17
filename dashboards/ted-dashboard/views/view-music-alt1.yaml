@@ -1,0 +1,25 @@
+# View: Music-Alt1 — Music Assistant player via YAMP (jianyu-li/yet-another-media-player).
+# path: music-alt1. Alternate to view-music.yaml (which uses mass-player-card) so we can
+# compare/iterate without losing the original. Same per-device resolution: ted-music-card
+# resolves this device's Music Assistant player (Settings → Sounds) and renders YAMP.
+# PREREQUISITE: install "yet-another-media-player" via HACS.
+type: custom:grid-layout
+path: music-alt1
+title: Music-Alt1
+icon: streamline-ultimate-color:music-note-1
+layout: !include ../shared/layout-content.yaml
+cards:
+  - type: custom:ted-music-card
+    view_layout:
+      grid-area: content
+    player_source: settings
+    engine: yamp
+    fill: true
+    yamp_config:
+      template: large_modern
+      # Now-playing when playing; search/browse when idle.
+      idle_screen: search
+      match_theme: true
+      artwork_object_fit: cover
+  - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml

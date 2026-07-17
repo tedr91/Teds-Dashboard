@@ -1,0 +1,96 @@
+# View: Music-Compare — LIVE side-by-side of YAMP `template` looks on the real hardware.
+# path: music-compare. Temporary comparison scratch view: every card is the SAME
+# ted-music-card (engine: yamp, this device's resolved Music Assistant player) with a
+# different `template`, at a fixed card_height so several fit on screen. Scrolls.
+# Remove this view once a look is chosen. PREREQUISITE: "yet-another-media-player" (HACS).
+type: custom:grid-layout
+# No `height:` — the grid grows with content so the page scrolls through the options.
+layout:
+  grid-template-columns: minmax(0, 1fr)
+  grid-gap: 0
+  padding: 12px
+  padding-bottom: 96px
+path: music-compare
+title: Music-Compare
+icon: mdi:compare-horizontal
+cards:
+  - !include ../shared/background.yaml
+  - !include ../shared/navbar.yaml
+  - type: grid
+    columns: 2
+    square: false
+    view_layout:
+      grid-area: 1 / 1
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### large_modern"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: large_modern
+              idle_screen: search
+              match_theme: true
+              card_height: 560
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### huge_yamp"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: huge_yamp
+              idle_screen: search
+              match_theme: true
+              card_height: 560
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### crisp_clean"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: crisp_clean
+              idle_screen: search
+              match_theme: true
+              card_height: 560
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### normal_mini"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: normal_mini
+              idle_screen: search
+              match_theme: true
+              card_height: 560
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### minimal_mini"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: minimal_mini
+              idle_screen: search
+              match_theme: true
+              card_height: 560
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### quick_and_easy"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            yamp_config:
+              template: quick_and_easy
+              idle_screen: search
+              match_theme: true
+              card_height: 560
