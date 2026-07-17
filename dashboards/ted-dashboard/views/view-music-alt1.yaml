@@ -19,6 +19,9 @@ cards:
       template: large_modern
       # Now-playing when playing; search/browse when idle.
       idle_screen: search
+      # Follow the HA theme. ted-music-card forces YAMP's search/menu overlay
+      # (--yamp-overlay-bg) to a near-opaque, theme-tinted surface so the now-playing
+      # artwork doesn't bleed through on our translucent themes.
       match_theme: true
       artwork_object_fit: cover
   - !include ../shared/navbar.yaml
