@@ -37,8 +37,12 @@ cards:
             height: 96% !important;
           }
     # Left pane = pure now-playing player (search lives in the right pane).
+    # When idle (nothing playing), show a static idle image instead of the equalizer
+    # splash. Placeholder uses a bundled backend wallpaper; swap for your own image.
     left_config:
       idle_screen: default
+      idle_image: /teds_cards_backend/backgrounds/general/MountainStream.webp
+      show_idle_artwork_when_not_playing: true
     # Right pane = dedicated search / library / queue. card_type:search + hide_menu_player
     # come from the card's per-engine base; crisp_clean gives a clean list-style browse.
     right_config:
