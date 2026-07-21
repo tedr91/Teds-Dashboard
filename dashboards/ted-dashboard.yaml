@@ -24,7 +24,6 @@ views:
   - !include ted-dashboard/views/view-weather.yaml
   - !include ted-dashboard/views/view-music.yaml
   - !include ted-dashboard/views/view-music-alt1.yaml
-  - !include ted-dashboard/views/view-music-compare.yaml
   - !include ted-dashboard/views/view-photos.yaml
   - !include ted-dashboard/views/view-calendar-month.yaml
   - !include ted-dashboard/views/view-calendar-week.yaml

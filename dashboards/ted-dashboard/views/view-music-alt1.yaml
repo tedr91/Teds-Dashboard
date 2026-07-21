@@ -1,47 +1,20 @@
-# View: Music-Alt1 — Music Assistant player via YAMP (jianyu-li/yet-another-media-player).
-# path: music-alt1. Alternate to view-music.yaml (which uses mass-player-card) so we can
-# compare/iterate without losing the original. Same per-device resolution: ted-music-card
-# resolves this device's Music Assistant player (Settings → Sounds) and renders YAMP.
-# PREREQUISITE: install "yet-another-media-player" via HACS.
+# View: Music-Alt1 — TEMPORARY placeholder. path: music-alt1.
+# Exists so the navbar View Launcher auto-combines the "music*" views (music + music-alt1)
+# into one "Music" group button, exactly like the home* and calendar* groups (grouping is
+# generic: views are grouped by their path prefix up to the first "-"). Content is a
+# throwaway placeholder — replace or remove later.
 type: custom:grid-layout
 path: music-alt1
 title: Music-Alt1
 icon: streamline-ultimate-color:music-note-1
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-music-card
+  - type: custom:ted-messagebox-card
     view_layout:
       grid-area: content
-    player_source: settings
-    engine: yamp
-    fill: true
-    # Side-by-side: 60% now-playing player (left) + 40% library/search/queue (right).
-    # Both panes drive this device's resolved Music Assistant player and stay in sync
-    # via HA state. Collapses to player-only on narrow screens (< ~700px).
-    split: 60
-    yamp_config:
-      template: large_modern
-      # Follow the HA theme. ted-music-card forces YAMP's search/menu overlay
-      # (--yamp-overlay-bg) to a near-opaque, theme-tinted surface so the now-playing
-      # artwork doesn't bleed through on our translucent themes.
-      match_theme: true
-      artwork_object_fit: cover
-      # Give YAMP's in-menu search overlay a real height (used by the LEFT player's
-      # hamburger search); the RIGHT pane's dedicated search renders in the card body.
-      card_mod:
-        style: |
-          .entity-options-overlay {
-            align-items: stretch !important;
-          }
-          .entity-options-container {
-            height: 96% !important;
-          }
-    # Left pane = pure now-playing player (search lives in the right pane).
-    left_config:
-      idle_screen: default
-    # Right pane = dedicated search / library / queue. card_type:search + hide_menu_player
-    # come from the card's per-engine base; crisp_clean gives a clean list-style browse.
-    right_config:
-      template: crisp_clean
+    severity: info
+    icon: mdi:music
+    title: Music-Alt1
+    message: Temporary placeholder view.
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
