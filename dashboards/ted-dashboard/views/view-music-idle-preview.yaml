@@ -87,3 +87,20 @@ cards:
               match_theme: true
               card_height: 420
               artwork_object_fit: no_artwork
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "### Idle image (idle_image + placeholder wallpaper)"
+          - type: custom:ted-music-card
+            player_source: settings
+            engine: yamp
+            layout_switcher: false
+            yamp_config:
+              template: large_modern
+              match_theme: true
+              card_height: 420
+              idle_screen: default
+              # Temporary placeholder — one of the bundled backend wallpapers so you can
+              # see the idle_image effect. Swap for your own image once you decide.
+              idle_image: /teds_cards_backend/backgrounds/general/MountainStream.webp
+              show_idle_artwork_when_not_playing: true
