@@ -15,19 +15,19 @@ cards:
     player_source: settings
     engine: yamp
     fill: true
+    # Side-by-side: 60% now-playing player (left) + 40% library/search/queue (right).
+    # Both panes drive this device's resolved Music Assistant player and stay in sync
+    # via HA state. Collapses to player-only on narrow screens (< ~700px).
+    split: 60
     yamp_config:
       template: large_modern
-      # Now-playing when playing; search/browse when idle.
-      idle_screen: search
       # Follow the HA theme. ted-music-card forces YAMP's search/menu overlay
       # (--yamp-overlay-bg) to a near-opaque, theme-tinted surface so the now-playing
       # artwork doesn't bleed through on our translucent themes.
       match_theme: true
       artwork_object_fit: cover
-      # YAMP's search/menu overlay container (.entity-options-container) only has
-      # max-height (no definite height) inside an align:flex-start overlay, so with the
-      # virtualized card-grid results it collapses to ~1 row (the browse area is cut
-      # short). Give it a real height so the flex chain + virtualizer fill the card.
+      # Give YAMP's in-menu search overlay a real height (used by the LEFT player's
+      # hamburger search); the RIGHT pane's dedicated search renders in the card body.
       card_mod:
         style: |
           .entity-options-overlay {
@@ -36,5 +36,12 @@ cards:
           .entity-options-container {
             height: 96% !important;
           }
+    # Left pane = pure now-playing player (search lives in the right pane).
+    left_config:
+      idle_screen: default
+    # Right pane = dedicated search / library / queue. card_type:search + hide_menu_player
+    # come from the card's per-engine base; fewer columns to fit the narrower pane.
+    right_config:
+      search_card_columns: 2
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
