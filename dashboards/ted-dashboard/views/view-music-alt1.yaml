@@ -40,8 +40,8 @@ cards:
     left_config:
       idle_screen: default
     # Right pane = dedicated search / library / queue. card_type:search + hide_menu_player
-    # come from the card's per-engine base; fewer columns to fit the narrower pane.
+    # come from the card's per-engine base; crisp_clean gives a clean list-style browse.
     right_config:
-      search_card_columns: 2
+      template: crisp_clean
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
