@@ -47,5 +47,8 @@ cards:
     # come from the card's per-engine base; crisp_clean gives a clean list-style browse.
     right_config:
       template: crisp_clean
+      # On first load, open the Playlist tab (not Favorites).
+      default_search_filter: playlist
+      default_search_favorites: false
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
