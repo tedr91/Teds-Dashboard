@@ -45,8 +45,8 @@ cards:
       show_idle_artwork_when_not_playing: true
       # Auto-open the synced lyrics view whenever something is playing.
       always_show_lyrics: true
-      # Highlight advances 1s to compensate for the lyric line lagging the audio.
-      lyrics_pre_roll: 1
+      # Highlight advances 0.5s to compensate for the lyric line lagging the audio.
+      lyrics_pre_roll: 0.5
     # Right pane = dedicated search / library / queue. card_type:search + hide_menu_player
     # come from the card's per-engine base; crisp_clean gives a clean list-style browse.
     right_config:
