@@ -10,6 +10,6 @@ cards:
   - type: custom:ted-announce-card
     view_layout:
       grid-area: content
-    theme: ted-style
+    theme: ha
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
