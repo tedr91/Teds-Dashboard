@@ -4,7 +4,7 @@
 type: custom:grid-layout
 path: photos
 title: Photos
-icon: streamline-ultimate-color:picture-stack-landscape
+icon: streamline-ultimate-color:picture-sun
 layout: !include ../shared/layout-content.yaml
 cards:
   - type: custom:ted-messagebox-card
@@ -12,7 +12,7 @@ cards:
       grid-area: content
       place-self: center
     severity: info
-    icon: streamline-ultimate-color:picture-stack-landscape
+    icon: streamline-ultimate-color:picture-sun
     title: Photos
     message: This is a placeholder view. Content coming soon.
   - !include ../shared/navbar.yaml
