@@ -9,11 +9,16 @@ title: Cameras
 icon: streamline-ultimate-color:shield-monitor
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-camera-card
+  - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
-    cameras_source: settings
+    backend_integration: true
+    state_key: cameras
     fill: true
-    show_name: true
+    card:
+      type: custom:ted-camera-card
+      cameras_source: settings
+      fill: true
+      show_name: true
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml

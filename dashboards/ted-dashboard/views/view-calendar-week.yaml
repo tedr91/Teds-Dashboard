@@ -17,16 +17,21 @@ cards:
   # custom:ted-calendar-card (wraps daylight-calendar-card; fill:true sizes it to the
   # content cell). Calendars come from Settings → Calendars (falling back to Ted's
   # baked-in defaults). Per-view overrides (chrome-less week layout) go in calendar_config.
-  - type: custom:ted-calendar-card
+  - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
-    calendar_source: settings
-    default_view: week
+    backend_integration: true
+    state_key: calendar-week
     fill: true
-    calendar_config:
-      hide_header: true
-      hide_calendars: true
-      hide_controls: true
-      rolling_days_week_compact: 5
+    card:
+      type: custom:ted-calendar-card
+      calendar_source: settings
+      default_view: week
+      fill: true
+      calendar_config:
+        hide_header: true
+        hide_calendars: true
+        hide_controls: true
+        rolling_days_week_compact: 5
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml

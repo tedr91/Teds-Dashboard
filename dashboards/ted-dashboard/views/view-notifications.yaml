@@ -7,8 +7,13 @@ title: Notifications
 icon: streamline-ultimate-color:alarm-bell-ring
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-notification-card
+  - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
+    backend_integration: true
+    state_key: notifications
+    fill: true
+    card:
+      type: custom:ted-notification-card
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml

@@ -7,9 +7,14 @@ title: Announce
 icon: streamline-ultimate-color:megaphone
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-announce-card
+  - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
-    theme: ha
+    backend_integration: true
+    state_key: announce
+    fill: true
+    card:
+      type: custom:ted-announce-card
+      theme: ha
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
