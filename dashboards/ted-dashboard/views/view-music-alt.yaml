@@ -1,0 +1,51 @@
+# View: Music-Alt — testbed for the Ted's Fullscreen Card. path: music-alt
+# Same Music Assistant player as the Music view, but the ted-music-card is HOUSED inside a
+# ted-fullscreen-card so it can be toggled between a normal card and full screen via the
+# corner icon. backend_integration + state_key persist the normal/maximized state per device.
+# PREREQUISITE: install "yet-another-media-player" via HACS.
+type: custom:grid-layout
+path: music-alt
+title: Music-Alt
+icon: streamline-ultimate-color:music-note-1
+layout: !include ../shared/layout-content.yaml
+cards:
+  - type: custom:ted-fullscreen-card
+    view_layout:
+      grid-area: content
+    # Remember whether this device left the player normal or full-screen, and size the
+    # overlay around the navbar (auto-hide aware) + this device's screen.
+    backend_integration: true
+    state_key: music-alt-player
+    # Fill the content cell in the normal (non-maximized) state too.
+    fill: true
+    card:
+      type: custom:ted-music-card
+      player_source: settings
+      engine: yamp
+      fill: true
+      # Side-by-side: 60% now-playing player (left) + 40% library/search/queue (right).
+      split: 60
+      yamp_config:
+        template: large_modern
+        match_theme: true
+        artwork_object_fit: cover
+        card_mod:
+          style: |
+            .entity-options-overlay {
+              align-items: stretch !important;
+            }
+            .entity-options-container {
+              height: 96% !important;
+            }
+      left_config:
+        idle_screen: default
+        idle_image: /teds_cards_backend/backgrounds/general/MountainStream.webp
+        show_idle_artwork_when_not_playing: true
+        always_show_lyrics: true
+        lyrics_pre_roll: 0.5
+      right_config:
+        template: crisp_clean
+        default_search_filter: playlist
+        default_search_favorites: false
+  - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml
