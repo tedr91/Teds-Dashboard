@@ -1,19 +1,21 @@
-# View: Photos — placeholder (custom:grid-layout). path: photos
-# Uses the Welcome view's clock + content layout. The content area holds a
-# MessageBox card as the placeholder. Navbar is a plain card (position:fixed).
+# View: Photos — Ted's Photo Viewer (custom:grid-layout). path: photos
+# Content-only layout: one full-height Photo Viewer card filling the content area.
+# The album folder comes from the Photos album setting (Settings → Photos); this
+# device re-opens its last-viewed photo on load (Settings → Photos toggle).
+# Navbar + background are shared position:fixed includes.
 type: custom:grid-layout
 path: photos
 title: Photos
 icon: streamline-ultimate-color:picture-sun
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-messagebox-card
+  - type: custom:ted-photo-viewer-card
     view_layout:
       grid-area: content
-      place-self: center
-    severity: info
-    icon: streamline-ultimate-color:picture-sun
-    title: Photos
-    message: This is a placeholder view. Content coming soon.
+    source: album
+    fill: true
+    open_last_on_load: true
+    backend_integration: true
+    theme: ted-style
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
