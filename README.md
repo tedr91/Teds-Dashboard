@@ -27,7 +27,6 @@ This repository's **root maps onto `/config`**. The Git pull add-on clones/pulls
       view-music.yaml
       view-calendar-month.yaml
       view-calendar-week.yaml
-      view-mediaroom.yaml
       view-alarms-timers.yaml
       view-settings.yaml
 ```
