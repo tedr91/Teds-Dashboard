@@ -6,12 +6,16 @@
 type: custom:grid-layout
 path: assist-response
 title: Assist-Response
-icon: streamline-ultimate-color:messages-bubble-information
+icon: streamline-ultimate-color:messages-bubble-text
 layout: !include ../shared/layout-content.yaml
 cards:
-  - type: custom:ted-assist-response-card
+  - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
+    backend_integration: true
+    state_key: assist_response
     fill: true
+    card:
+      type: custom:ted-assist-response-card
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
