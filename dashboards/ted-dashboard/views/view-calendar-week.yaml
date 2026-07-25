@@ -20,7 +20,7 @@ cards:
   - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
-    backend_integration: true
+    dashboard_integration: true
     state_key: calendar-week
     fill: true
     card:

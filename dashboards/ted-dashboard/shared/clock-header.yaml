@@ -12,7 +12,7 @@ transparency: 100
 # Source the weather entity from the global `weather_entity` setting (Settings →
 # General) rather than hardcoding it. Falls back to the first weather.* entity when
 # the setting is unset or the backend isn't installed.
-backend_integration: true
+dashboard_integration: true
 clock_size: custom
 clock_size_custom: 95
 weather_size: custom

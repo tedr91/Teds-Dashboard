@@ -47,7 +47,7 @@ cards:
       - type: custom:ted-clock-weather-card
         theme: ted-style
         transparency: 100
-        backend_integration: true
+        dashboard_integration: true
         show_date: false
         show_clock: false
         card_mod:

@@ -12,7 +12,7 @@ cards:
   - type: custom:ted-fullscreen-card
     view_layout:
       grid-area: content
-    backend_integration: true
+    dashboard_integration: true
     state_key: music
     fill: true
     card:
@@ -46,7 +46,7 @@ cards:
       # splash. Placeholder uses a bundled backend wallpaper; swap for your own image.
       left_config:
         idle_screen: default
-        idle_image: /teds_cards_backend/backgrounds/general/MountainStream.webp
+        idle_image: /teds_dashboard_system/backgrounds/general/MountainStream.webp
         show_idle_artwork_when_not_playing: true
         # Auto-open the synced lyrics view whenever something is playing.
         always_show_lyrics: true
