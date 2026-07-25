@@ -21,7 +21,7 @@ This repository's **root maps onto `/config`**. The Git pull add-on clones/pulls
       view-home-wallpanel-v.yaml
       view-home-handheld.yaml
       view-cameras.yaml
-      view-info.yaml
+      view-assist-response.yaml
       view-climate.yaml
       view-weather.yaml
       view-music.yaml

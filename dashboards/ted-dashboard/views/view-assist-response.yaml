@@ -1,0 +1,17 @@
+# View: Assist-Response — the visual counterpart to a spoken Assist answer.
+# A voice intent / automation calls `teds_cards_backend.assist_response` (title +
+# message + optional image, targeted at areas/devices); the backend pushes it here
+# and navigates the targeted screens to this view. Content stays until replaced
+# (no auto-revert yet). Navbar is a plain card (position:fixed).
+type: custom:grid-layout
+path: assist-response
+title: Assist-Response
+icon: streamline-ultimate-color:messages-bubble-information
+layout: !include ../shared/layout-content.yaml
+cards:
+  - type: custom:ted-assist-response-card
+    view_layout:
+      grid-area: content
+    fill: true
+  - !include ../shared/navbar.yaml
+  - !include ../shared/background.yaml
