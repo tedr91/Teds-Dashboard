@@ -8,20 +8,12 @@ icon: streamline-ultimate-color:e-commerce-touch-buy
 layout: !include ../shared/layout-clock-content.yaml
 cards:
   - !include ../shared/clock-header.yaml
-  # Full-height week calendar in the "content" grid-area, rendered by
-  # custom:ted-calendar-card (wraps daylight-calendar-card; fill:true sizes it to the
-  # content cell). Calendars come from Settings → Calendars (falling back to Ted's
-  # baked-in defaults). Per-view overrides (chrome-less week layout) go in calendar_config.
-  - type: custom:ted-calendar-card
+  - type: custom:ted-messagebox-card
     view_layout:
       grid-area: content
-    calendar_source: settings
-    default_view: week
-    fill: true
-    calendar_config:
-      hide_header: true
-      hide_calendars: true
-      hide_controls: true
-      rolling_days_week_compact: 5
+    severity: info
+    icon: streamline-ultimate-color:e-commerce-touch-buy
+    title: Home (Wall Panel — Landscape)
+    message: This is a placeholder view. Content coming soon.
   - !include ../shared/navbar.yaml
   - !include ../shared/background.yaml
