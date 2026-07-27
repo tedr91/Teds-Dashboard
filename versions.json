@@ -21,6 +21,28 @@
     "view-home-wallpanel-h": "1.0.0",
     "view-home-wallpanel-v": "1.0.0"
   },
+  "layout": {
+    "kiosk_include": "shared/kiosk.yaml",
+    "order": [
+      "views/view-welcome.yaml",
+      "views-home/view-home-nightstand.yaml",
+      "views-home/view-home-wallpanel-h.yaml",
+      "views-home/view-home-wallpanel-v.yaml",
+      "views-home/view-home-handheld.yaml",
+      "views/view-cameras.yaml",
+      "views/view-climate.yaml",
+      "views/view-weather.yaml",
+      "views/view-music.yaml",
+      "views/view-photos.yaml",
+      "views/view-calendar-month.yaml",
+      "views/view-calendar-week.yaml",
+      "views/view-alarms-timers.yaml",
+      "views/view-assist-response.yaml",
+      "views/view-announce.yaml",
+      "views/view-notifications.yaml",
+      "views/view-settings.yaml"
+    ]
+  },
   "compat": {
     "cards_min": "1.0.341",
     "themes_min": "0.0.0"
