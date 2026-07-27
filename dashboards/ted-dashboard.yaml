@@ -9,10 +9,9 @@
 #
 # !include paths below are relative to THIS file's directory (dashboards/), so the
 # partials live under dashboards/ted-dashboard/, organized into:
-#   shared/      — reused partials (kiosk, navbar, clock-header)
+#   shared/      — reused partials (navbar, clock-header)
 #   views-home/  — the per-device "home" views
 #   views/       — all the other views
-kiosk_mode: !include ted-dashboard/shared/kiosk.yaml
 views:
   - !include ted-dashboard/views/view-welcome.yaml
   - !include ted-dashboard/views-home/view-home-nightstand.yaml

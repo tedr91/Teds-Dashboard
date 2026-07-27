@@ -22,7 +22,6 @@
     "view-home-wallpanel-v": "1.0.0"
   },
   "layout": {
-    "kiosk_include": "shared/kiosk.yaml",
     "order": [
       "views/view-welcome.yaml",
       "views-home/view-home-nightstand.yaml",
