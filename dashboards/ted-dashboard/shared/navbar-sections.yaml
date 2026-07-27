@@ -6,7 +6,6 @@
 # 0 — Left Section
 - items:
     - type: weather
-      entity: weather.forecast_home
       tap_action:
         action: navigate-dashboard
         dashboard: weather_dashboard
