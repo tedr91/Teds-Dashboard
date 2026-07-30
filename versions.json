@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "dashboard": "0.9.9",
-  "shared": "1.0.2",
+  "dashboard": "0.9.10",
+  "shared": "1.0.3",
   "views": {
     "view-welcome": "1.0.7",
     "view-alarms-timers": "1.0.0",
@@ -43,7 +43,7 @@
     ]
   },
   "compat": {
-    "cards_min": "0.9.0",
+    "cards_min": "0.9.27",
     "themes_min": "0.0.0"
   }
 }
