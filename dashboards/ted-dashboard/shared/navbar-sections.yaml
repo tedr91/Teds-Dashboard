@@ -15,8 +15,9 @@
 # The launcher (Settings → Navbar → Launcher Buttons) prepends buttons for the
 # dashboard's views into this section; leave it empty so there are no duplicates.
 - items: []
-# 3 — Mid-Right Section (empty)
-- items: []
+# 3 — Mid-Right Section — push-to-talk Assist mic (hidden when disabled in Settings → Voice).
+- items:
+    - type: assist
 # 4 — Right Section
 - items:
     - type: timers
