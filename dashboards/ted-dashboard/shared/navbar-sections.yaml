@@ -15,13 +15,13 @@
 # The launcher (Settings → Navbar → Launcher Buttons) prepends buttons for the
 # dashboard's views into this section; leave it empty so there are no duplicates.
 - items: []
-# 3 — Mid-Right Section — push-to-talk Assist mic (always on the bar, never collapsed
-# into the overflow chevron; hidden only when disabled in Settings → Voice).
-- overflow: false
-  items:
-    - type: assist
-# 4 — Right Section
+# 3 — Mid-Right Section (empty)
+- items: []
+# 4 — Right Section — the Assist mic leads the right-hand group so it shifts left
+# together with the timers/alarms/clock/notifications as they appear (rather than
+# being overlapped). The mic is hidden when disabled in Settings → Voice.
 - items:
+    - type: assist
     - type: timers
     - type: alarms
     - type: datetime
