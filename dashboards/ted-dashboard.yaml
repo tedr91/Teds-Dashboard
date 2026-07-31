@@ -19,6 +19,7 @@ views:
   - !include ted-dashboard/views-home/view-home-wallpanel-v.yaml
   - !include ted-dashboard/views-home/view-home-handheld.yaml
   - !include ted-dashboard/views/view-cameras.yaml
+  - !include ted-dashboard/views/view-vision.yaml
   - !include ted-dashboard/views/view-climate.yaml
   - !include ted-dashboard/views/view-weather.yaml
   - !include ted-dashboard/views/view-music.yaml
