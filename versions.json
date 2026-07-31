@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "dashboard": "0.9.11",
+  "dashboard": "0.9.12",
   "shared": "1.0.3",
   "views": {
     "view-welcome": "1.0.7",
@@ -10,7 +10,7 @@
     "view-calendar-month": "1.0.0",
     "view-calendar-week": "1.0.0",
     "view-cameras": "1.0.0",
-    "view-vision": "1.0.0",
+    "view-vision": "1.0.1",
     "view-climate": "1.0.0",
     "view-music": "1.0.0",
     "view-notifications": "1.0.0",
