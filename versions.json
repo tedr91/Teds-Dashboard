@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "dashboard": "0.9.23",
+  "dashboard": "0.9.24",
   "shared": "1.0.3",
   "views": {
     "view-welcome": "1.0.7",
@@ -17,6 +17,7 @@
     "view-photos": "1.0.0",
     "view-settings": "1.0.1",
     "view-weather": "1.0.1",
+    "view-webview": "1.0.0",
     "view-home-handheld": "1.0.0",
     "view-home-nightstand": "1.0.0",
     "view-home-wallpanel-h": "1.2.3",
@@ -41,11 +42,12 @@
       "views/view-assist-response.yaml",
       "views/view-announce.yaml",
       "views/view-notifications.yaml",
-      "views/view-settings.yaml"
+      "views/view-settings.yaml",
+      "views/view-webview.yaml"
     ]
   },
   "compat": {
-    "cards_min": "0.9.27",
+    "cards_min": "0.9.67",
     "themes_min": "0.0.0"
   }
 }

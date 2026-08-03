@@ -31,3 +31,4 @@ views:
   - !include ted-dashboard/views/view-announce.yaml
   - !include ted-dashboard/views/view-notifications.yaml
   - !include ted-dashboard/views/view-settings.yaml
+  - !include ted-dashboard/views/view-webview.yaml
