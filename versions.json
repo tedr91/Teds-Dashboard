@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "dashboard": "0.9.26",
+  "dashboard": "0.9.27",
   "shared": "1.0.3",
   "views": {
     "view-welcome": "1.0.8",
@@ -15,7 +15,7 @@
     "view-notifications": "1.0.0",
     "view-photos": "1.0.0",
     "view-settings": "1.0.1",
-    "view-weather": "1.0.1",
+    "view-weather": "1.0.2",
     "view-webview": "1.0.0",
     "view-home-handheld": "1.0.0",
     "view-home-nightstand": "1.0.0",
