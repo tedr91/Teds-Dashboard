@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "dashboard": "0.9.32",
+  "dashboard": "0.9.33",
   "shared": "1.0.3",
   "views": {
     "view-welcome": "1.0.8",
@@ -11,7 +11,7 @@
     "view-calendar-week": "1.1.0",
     "view-cameras": "1.1.0",
     "view-climate": "1.0.0",
-    "view-music": "1.0.0",
+    "view-music": "1.0.1",
     "view-notifications": "1.0.0",
     "view-photos": "1.0.0",
     "view-settings": "1.0.1",
@@ -45,7 +45,7 @@
     ]
   },
   "compat": {
-    "cards_min": "0.9.97",
+    "cards_min": "0.9.117",
     "themes_min": "0.0.0"
   }
 }
