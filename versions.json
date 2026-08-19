@@ -45,7 +45,7 @@
     ]
   },
   "compat": {
-    "cards_min": "0.9.169",
+    "cards_min": "0.9.170",
     "themes_min": "0.0.0"
   }
 }
