@@ -57,7 +57,7 @@ refresh (no restart).
 `!include` paths resolve relative to the **directory of the file containing the directive**.
 `ted-dashboard.yaml` includes the partials from `ted-dashboard/`, which is organized into:
 
-- `shared/` — reused partials: `kiosk.yaml`, `navbar.yaml`, `navbar-autohide.yaml`,
+- `shared/` — reused partials: `kiosk.yaml`, `navbar.yaml`,
   `navbar-menu-items.yaml`, and `clock-header.yaml`. (The navbar's sections/items are
   now managed in Settings → Navbar, not a YAML partial.)
 - `views-home/` — the per-device "home" views (`view-home-*.yaml`).
